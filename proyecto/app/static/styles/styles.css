@@ -1,21 +1,28 @@
+/* fondo general */
 body {
     background-color: #082040;
 }
+/* color de texto de la barra de navegación*/
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: #7787A6;
 }
-
+/* color de texto cuando se pasa el mouse por encima de la barra de navegación*/
 h1:hover {
 	color: #80F2E7;
 }
-
+/* títulos que no estén en la barra de navegación (Ofertas recomendadas, noticias, etc*/
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     color: #F2F2F2;
 }
-
+/* subtítulo de noticia, juegos en catálogo, y página de juegos texto */
 h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7787A6;
+}
+/* texto de noticias */
+p {
     font-family: Arial, Helvetica, sans-serif;
     color: #7787A6;
 }
