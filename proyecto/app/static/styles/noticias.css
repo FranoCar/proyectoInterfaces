@@ -45,3 +45,20 @@ body {
 .flickity-page-dots .dot.is-selected {
   background: white;
 }
+
+.flickity-button {
+  background: #384D59;
+}
+
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+}
+
+.flickity-button-icon {
+  fill: #0C254F;
+}
+
+.flickity-button:hover {
+  background: #80F2E7;
+}
