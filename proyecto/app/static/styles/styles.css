@@ -71,6 +71,16 @@ li, a {
 
 ****************/ 
 
+
+.container {
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    width: 50%;
+    padding: 10px;
+}
+
 /* color de texto de la barra de navegación*/
 h1 {
     font-family: Arial, Helvetica, sans-serif;
@@ -83,6 +93,8 @@ h1:hover {
 /* títulos que no estén en la barra de navegación (Ofertas recomendadas, noticias, etc*/
 h2 {
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    margin-left: 100px;
     color: #F2F2F2;
 }
 /* subtítulo de noticia, juegos en catálogo, y página de juegos texto */
