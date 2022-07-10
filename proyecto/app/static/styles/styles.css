@@ -107,3 +107,12 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     color: #7787A6;
 }
+
+.resumen {
+    height: 120px;
+    background-color: #7787A6;
+    margin: 30px;
+    color: white;
+    width: 300px;
+    padding: 50px;
+}
