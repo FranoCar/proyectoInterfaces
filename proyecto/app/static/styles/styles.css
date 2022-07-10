@@ -1,7 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 /* fondo general */
 body {
     background-color: #082040;
 }
+
+/****************
+
+                    BARRA DE NAVEGACIÓN
+
+****************/ 
+header {
+    background-color: #0F2859;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 124px;
+    padding: 10px 10%;
+}
+/* letras de la barra de nav*/
+li, a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color:#7787A6;
+    text-decoration: none;
+}
+/* para que no se vea como una lista*/
+.nav-links {
+    list-style: none;
+}
+/* para que cada elemento de la lista este uno al lado de otro*/
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+/* para que el cambio sea smooth */
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+/* color del texto al poner el mouse encima */
+.nav-links li a:hover {
+    color: #80F2E7;
+}
+/* para que salga marcada la sección en la que se esta*/
+.nav-links a.is-active {
+    color: #80F2E7;
+}
+/* cambio de cursor */
+.header .user-cart{
+    cursor: pointer;
+}
+/* posición y tamaño de carrito/usuario */
+.header .user-cart img{
+    height: 80px;
+    width: auto;
+    padding: 9px;
+    transition: all 0.3s;
+}
+/* para que el carrito y foto de usuario se agrande*/
+.header .user-cart img:hover{
+    transform: scale(1.2);
+}
+/****************
+
+                    BARRA DE NAVEGACIÓN
+
+****************/ 
+
 /* color de texto de la barra de navegación*/
 h1 {
     font-family: Arial, Helvetica, sans-serif;
