@@ -1,46 +1,48 @@
 /* external css: flickity.css */
-
-* { box-sizing: border-box; }
-
-body { 
-  font-family: sans-serif;
-}
-
 .carousel {
-  margin-top: 20px;
-  background: #0C254F;
+  margin-top: 0 auto;
 }
 
 .carousel-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #0C254F;
+  width: 100%;
+  height: 300px;
   border-radius: 5px;
-  counter-increment: gallery-cell;
 }
 
-/* cell number */
-.carousel-cell:before {
+.carousel-cell-noticias {
+  background: #0C254F;
+}
+
+.carousel-cell-rec {
+  background: #082040;
+}
+
+.carousel-cell img {
   display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
 }
 
 /* position dots in carousel */
 .flickity-page-dots {
-  bottom: 0px;
+  bottom: -40px;
 }
 /* white circles */
 .flickity-page-dots .dot {
-  width: 12px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
   opacity: 1;
   background: transparent;
-  border: 2px solid white;
+  border: 3px solid white;
 }
 /* fill-in selected dot */
 .flickity-page-dots .dot.is-selected {

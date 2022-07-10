@@ -70,14 +70,13 @@ li, a {
                     BARRA DE NAVEGACIÓN
 
 ****************/ 
-
-
+/* para las recomendaciones*/
 .container {
-    margin-top: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 30px;
-    width: 50%;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    width: 90%;
     padding: 10px;
 }
 
@@ -86,16 +85,32 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: #7787A6;
 }
-/* color de texto cuando se pasa el mouse por encima de la barra de navegación*/
-h1:hover {
-	color: #80F2E7;
-}
-/* títulos que no estén en la barra de navegación (Ofertas recomendadas, noticias, etc*/
+
+/* títulos que no estén en la barra de navegación (Ofertas recomendadas, noticias, etc */
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 30px;
     margin-left: 100px;
     color: #F2F2F2;
+}
+/* para que el boton de MÁS en recomendaciones salga al lado de los títulos*/
+.h2-recomendaciones {
+    display: inline-block;
+}
+
+/* botón MÁS en recomendaciones */
+.btn-mas {
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #F2F2F2;
+    background-color: #F23568;
+    margin: 4px 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+/* MÁS no hace nada, pero le puse efecto para que se note que es un botón */
+.btn-mas:hover{
+    transform: scale(1.1);
 }
 /* subtítulo de noticia, juegos en catálogo, y página de juegos texto */
 h3 {

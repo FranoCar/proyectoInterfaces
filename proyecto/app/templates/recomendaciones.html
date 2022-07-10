@@ -2,7 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 		<link rel="stylesheet" href="static/styles/styles.css">
+		<link rel="stylesheet" href="static/styles/carousel.css">
 		<title>Pagina</title>
 	</head>
 	<body>
@@ -22,9 +26,50 @@
 				<img src="static/img/user.png" alt="Usuario">	
 			</div>
 		</header>
+		<h2 class="h2-recomendaciones">Ofertas recomendadas</h2>
+		<button class="btn-mas">MÁS</button>
 		<div class ="container">
-			<h2>Ofertas recomendadas</h2>
+			<div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true, "lazyLoad": true }'>
+				<div class="carousel-cell carousel-cell-rec">
+					<img class="carousel-cell-image" data-flickity-lazyload="static/img/prueba1.jpg" alt="p1">
+				</div>
+				<div class="carousel-cell carousel-cell-rec">
+					<img class="carousel-cell-image" data-flickity-lazyload="static/img/prueba2.jpg" alt="p2">
+				</div>
+				<div class="carousel-cell carousel-cell-rec">
+					<img class="carousel-cell-image" data-flickity-lazyload="static/img/prueba3.jpg" alt="p3">
+				</div>
+			</div>
 		</div>
-		
+		<h2 class="h2-recomendaciones">Novedades</h2>
+		<button class="btn-mas">MÁS</button>
+		<div class ="container">
+			<div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true, "lazyLoad": true }'>
+				<div class="carousel-cell carousel-cell-rec">
+					<img class="carousel-cell-image" data-flickity-lazyload="static/img/prueba1.jpg" alt="p1">
+				</div>
+				<div class="carousel-cell carousel-cell-rec">
+					<img class="carousel-cell-image" data-flickity-lazyload="static/img/prueba2.jpg" alt="p2">
+				</div>
+				<div class="carousel-cell carousel-cell-rec">
+					<img class="carousel-cell-image" data-flickity-lazyload="static/img/prueba3.jpg" alt="p3">
+				</div>
+			</div>
+		</div>
+		<h2 class="h2-recomendaciones">En base a lo que has jugado</h2>
+		<button class="btn-mas">MÁS</button>
+		<div class ="container">
+			<div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true, "lazyLoad": true }'>
+				<div class="carousel-cell carousel-cell-rec">
+					<img class="carousel-cell-image" data-flickity-lazyload="static/img/prueba1.jpg" alt="p1">
+				</div>
+				<div class="carousel-cell carousel-cell-rec">
+					<img class="carousel-cell-image" data-flickity-lazyload="static/img/prueba2.jpg" alt="p2">
+				</div>
+				<div class="carousel-cell carousel-cell-rec">
+					<img class="carousel-cell-image" data-flickity-lazyload="static/img/prueba3.jpg" alt="p3">
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
