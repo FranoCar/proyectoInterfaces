@@ -1,0 +1,752 @@
+FPS | FPS
+ (juego de fps)
+Gore | Gore
+ (juego de gore)
+Action | Acción
+ (juego de acción)
+Demons | Demonios
+ (juego de demonios)
+Shooter | Disparos
+ (juego de disparos)
+First-Person | Primera persona
+ (juego en primera persona)
+Gran banda sonora | Gran banda sonora
+ (gran banda sonora game)
+Multiplayer | Multijugador
+ (juego multijugador)
+Singleplayer | Un solo jugador
+ (juego de un solo jugador)
+Fast-Paced | Ritmo rápido
+ (juego de ritmo rápido)
+Sci-fi | Ciencia ficción
+ (juego de ciencia ficción)
+Horror | Terror
+ (juego de terror)
+Classic | Clásico
+ (juego clásico)
+Atmospheric | Atmosférico
+ (juego atmosférico)
+Difficult | Difícil
+ (juego difícil)
+Blood | Sangre
+ (juego de sangre)
+Remake | Remake
+ (juego de remake)
+Zombies | Zombies
+ (juego de zombies)
+Co-op | Cooperativo
+ (juego cooperativo)
+Memes | Memes
+ (juego de memes)
+Survival | Supervivencia
+ (juego de supervivencia)
+Battle Royale | Battle royale
+ (juego de battle royale)
+PvP | PvP
+ (juego de pvp)
+Third-Person Shooter | Disparos en tercer persona
+ (juego de disparos en tercer persona)
+Online Co-Op | Cooperativo en línea
+ (juego cooperativo en línea)
+Tactical | Táctico
+ (juego táctico)
+Early Access | Acceso temprano
+ (juego de acceso temprano)
+Strategy | Estrategia
+ (juego de estrategia)
+Competitive | Competitivo
+ (juego competitivo)
+Third Person | Tercera persona
+ (juego de tercera persona)
+Team-Based | Basado en equipo
+ (juego basado en equipo)
+Simulation | Simulación
+ (juego de simulación)
+Stealth | Sigilo
+ (juego de sigilo)
+Mechs | Mechs
+ (juego de mechs)
+Turn-Based | Por turnos
+ (juego por turnos)
+Turn-Based Tactics | Tácticas por turnos
+ (juego de tácticas por turnos)
+Turn-Based Strategy | Estrategia por turnos
+ (juego de estrategia por turnos)
+Robots | Robots
+ (juego de robots)
+RPG | RPG
+ (juego de rol)
+Futuristic | Futurista
+ (juego futurista)
+Character Customization | Personalización de personajes
+ (juego de personalización de personajes)
+Management | Gestión
+ (juego de gestión)
+Adventure | Aventuras
+ (juego de aventuras)
+Space | Espacial
+ (juego espacial)
+Story Rich | Rico en la historia
+ (juego rico en la historia)
+Open World | Mundo abierto
+ (juego de mundo abierto)
+Massively Multiplayer | Multijugador masivo
+ (juego multijugador masivo)
+Post-apocalyptic | Post-apocalíptico
+ (juego post-apocalíptico)
+Survival Horror | Terror de supervivencia
+ (juego de terror de supervivencia)
+Sandbox | Sandbox
+ (juego de sandbox)
+Indie | Indie
+ (juego indie)
+Military | Militar
+ (juego militar)
+MMORPG | MMORPG
+ (juego mmorpg)
+Free to Play | Gratis para jugar
+ (game gratis para jugar)
+Economy | Económico
+ (juego económico)
+Space Sim | Sim space
+ (juego sim space)
+Capitalism | Capitalismo
+ (juego de capitalismo)
+PvE | PvE
+ (juego pve)
+Hack and Slash | Hack and Slash
+ (juego de pirateo y corte)
+Character Action Game | Acción del personaje
+ (juego de acción del personaje)
+Spectacle fighter | Spectacle fighter
+ (juego de spectacle fighter)
+Violent | Violento
+ (juego violento)
+Stylized | Estilizado
+ (juego estilizado)
+Nudity | Desnudos
+ (juego de desnudos)
+Controller | Controlador
+ (juego de controlador)
+Anime | Anime
+ (juego de anime)
+Family Friendly | Familiar
+ (juego familiar)
+Funny | Divertido
+ (juego divertido)
+Puzzle | Rompecabezas
+ (rompecabezas)
+Physics | Física
+ (juego de física)
+Local Co-Op | Cooperativo local
+ (juego cooperativo local)
+Comedy | Comedia
+ (juego de comedia)
+Parkour | Parkour
+ (juego de parkour)
+Puzzle-Platformer | Plataformas de rompecabezas
+ (juego de plataformas de rompecabezas)
+Local Multiplayer | Multijugador local
+ (juego multijugador local)
+Casual | Casual
+ (juego casual)
+3D Platformer | Plataformas 3d
+ (juego de plataformas 3d)
+Split Screen | Pantalla dividida
+ (juego de pantalla dividida)
+Base Building | Construcción de base
+ (juego de construcción de base)
+RTS | RTS
+ (juego rts)
+Steampunk | Steampunk
+ (juego steampunk)
+City Builder | Builder de city
+ (juego de builder de city)
+Tower Defense | Defensa de la torre
+ (juego de defensa de la torre)
+Building | Construcción
+ (juego de construcción)
+Resource Management | Gestión de recursos
+ (juego de gestión de recursos)
+Real-Time with Pause | En tiempo real con pausa
+ (en tiempo real con juego de pausa)
+Isometric | Isométrico
+ (juego isométrico)
+Action RPG | Rpg de acción
+ (juego de rpg de acción)
+Games Workshop | Taller de s
+ (juego de taller de juegos)
+Fantasy | Fantasía
+ (juego de fantasía)
+War | Guerra
+ (juego de guerra)
+Dark Fantasy | Fantasía oscura
+ (juego de fantasía oscura)
+Warhammer 40K | Warhammer 40k
+ (juego de warhammer 40k)
+Historical | Histórico
+ (juego histórico)
+Colorful | Colorido
+ (juego colorido)
+Turn-Based Combat | Combate por turnos
+ (juego de combate por turnos)
+Rogue-like | Rogue-like
+ (juego de pícaro)
+Party-Based RPG | S de rol basado en la fiesta
+ (juego de juegos de rol basado en la fiesta)
+Juego de mesa | Mesa
+ (juego de mesa game)
+Strategy RPG | Rol de estrategia
+ (juego de rol de estrategia)
+Hex Grid | Cuadrícula hexadecimal
+ (juego de cuadrícula hexadecimal)
+Rogue-lite | Rogue-lite
+ (juego rogue-lite)
+Visual Novel | Novelas visuales
+ (juego de novelas visuales)
+Detective | Detectives
+ (juego de detectives)
+Mystery | Misterio
+ (juego de misterio)
+Female Protagonist | Protagonista femenino
+ (juego protagonista femenino)
+Psychological Horror | Terror psicológico
+ (juego de terror psicológico)
+Dark Humor | Humor negro
+ (juego de humor negro)
+Humor negro | Humor negro
+ (juego de humor negro)
+Dark | Oscuro
+ (juego oscuro)
+Dating Sim | Citas sim
+ (juego de citas sim)
+Cute | Lindo
+ (juego lindo)
+Crafting | Elaboración
+ (juego de elaboración)
+Voxel | Voxel
+ (juego de voxel)
+God Game | God
+ (god game game)
+Swordplay | Swordplay
+ (juego de swordplay)
+Fighting | Lucha
+ (juego de lucha)
+Pixel Graphics | Gráficos de píxeles
+ (juego de gráficos de píxeles)
+Philisophical | Filosófico
+ (juego filosófico)
+Hunting | Caza
+ (juego de caza)
+JRPG | Jrpg
+ (juego jrpg)
+Aliens | Extraterrestres
+ (juego de extraterrestres)
+Masterpiece | Obra maestra
+ (juego de obra maestra)
+Cold War | La guerra fría
+ (juego de la guerra fría)
+Linear | Lineal
+ (juego lineal)
+Crime | Crimen
+ (juego de crimen)
+Point & Click | Puntos y clic
+ (juego de puntos y clic)
+Conversation | Conversación
+ (juego de conversación)
+Dynamic Narration | Narración dinámica
+ (juego de narración dinámica)
+Cult Classic | Clásico de culto
+ (juego clásico de culto)
+Sexual Content | Contenido sexual
+ (juego de contenido sexual)
+Racing | Carreras
+ (juego de carreras)
+Arcade | Arcade
+ (juego arcade)
+Mythology | Mitología
+ (juego de mitología)
+Loot | Botín
+ (juego de botín)
+Top-Down | Arriba hacia abajo
+ (juego de arriba hacia abajo)
+Level Editor | Editor de nivel
+ (juego de editor de nivel)
+Bowling | Bolos
+ (juego de bolos)
+Modeable | Modible
+ (juego modible)
+Satire | Sátira
+ (juego de sátira)
+Platformer | Plataforma
+ (juego de plataforma)
+Science | Ciencias
+ (juego de ciencias)
+Short | Corto
+ (juego corto)
+Walking Simulator | Simulador de caminata
+ (juego de simulador de caminata)
+Parody | Parodia
+ (juego de parodia)
+Dungeons & Dragons | Mazmorras y dragones
+ (juego de mazmorras y dragones)
+CRPG | CRPG
+ (juego de crpg)
+Dungeon Crawler | Mazmorras
+ (juego de mazmorras)
+Cartoony | Dibujos animados
+ (juego de dibujos animados)
+Psychological | Psicológico
+ (juego psicológico)
+Realistic | Realista
+ (juego realista)
+Action-Adventure | Acción-aventura
+ (juego de acción-aventura)
+Mature | Maduro
+ (juego maduro)
+Beat 'em up | Beat 'em up
+ (batirlos el juego)
+Minijuegos | Minis
+ (minijuegos game)
+Drama | Drama
+ (juego de drama)
+2D | 2d
+ (2d juego)
+Star Wars | Star wars
+ (juego de star wars)
+Magic | Mágico
+ (juego mágico)
+Juego de Cartas | Cartas
+ (juego de cartas game)
+Las decisiones importan | Las decisiones importan
+ (las decisiones importan game)
+Episodic | Episódico
+ (juego episódico)
+Choose Your Own Adventure | Elige tu propio aventura
+ (elige tu propio juego de aventura)
+Political | Político
+ (juego político)
+Exploration | Exploración
+ (juego de exploración)
+Real-Time | Tiempo real
+ (juego en tiempo real)
+Tactical RPG | Rol táctico
+ (juego de rol táctico)
+e-sports | Deportes electrónicos
+ (juego de deportes electrónicos)
+Cinematic | Cinematográfico
+ (juego cinematográfico)
+Mod | Mod
+ (juego moderno)
+Grand Strategy | Gran estrategia
+ (gran juego de estrategia)
+4X | 4x
+ (4x juego)
+Assassin | Asesino
+ (juego de asesino)
+Immersive Sim | Sim inmersivo
+ (juego de sim inmersivo)
+2D Fighter | Combate 2d
+ (juego de combate 2d)
+2.5D | 2.5D
+ (2.5d juego)
+Tanks | Tanques
+ (juego de tanques)
+World War I | La guerra mundial
+ (juego de la guerra mundial)
+Driving | Conducción
+ (juego de conducción)
+3D | 3D
+ (juego 3d)
+Destruction | Destrucción
+ (juego de destrucción)
+Real Time Tactics | Tácticas en tiempo real
+ (juego de tácticas en tiempo real)
+Basado en una novela | Basado en una novela
+ (basado en una novela game)
+Multiple Endings | Múltiples finales
+ (juego de múltiples finales)
+Medieval | Medieval
+ (juego medieval)
+Bullet Hell | Infierno de balas
+ (juego de infierno de balas)
+Kickstarter | Kickstarter
+ (juego de kickstarter)
+Crowdfunded | Crowdfunded
+ (juego de crowdfunded)
+Agriculture | Agrícola
+ (juego agrícola)
+Trading Card Game | Cartas de intercambio
+ (juego de juego de cartas de intercambio)
+4 Player Local | Local de 4 jugadores
+ (juego local de 4 jugadores)
+Romance | Romántico
+ (juego romántico)
+Sports | Deportes
+ (juego de deportes)
+Retro | Retro
+ (juego retro)
+Pirates | Los piratas
+ (juego de los piratas)
+Naval | Naval
+ (juego naval)
+Noir | Noir
+ (juego noir)
+Side Scroller | Desplazamiento lateral
+ (juego de desplazamiento lateral)
+World War II | La segunda guerra mundial
+ (juego de la segunda guerra mundial)
+Golpe | Golpe
+ (golpe game)
+Offroad | Todo el camino
+ (juego de todo el camino)
+VR | VR
+ (juego de vr)
+Asymmetric VR | Vr asimétrico
+ (juego de vr asimétrico)
+Pesca | Caza de pescado
+ (caza de pescado)
+Relaxing | Relajante
+ (juego relajante)
+Alternate History | Historia alternativo
+ (juego de historia alternativo)
+Bello | Bello
+ (juego de bello)
+Dystopian | Distópico
+ (juego distópico)
+Time Travel | Viaje en el tiempo
+ (juego de viaje en el tiempo)
+Dragons | Dragones
+ (juego de dragones)
+Western | Occidental
+ (juego occidental)
+Horses | Caballos
+ (juego de caballos)
+Para rejugar | Para rejugar
+ (para rejugar game)
+Mini golf | Cualquiera que sea el mini golf
+ (cualquiera que sea el mini golf)
+Golf | Golf
+ (juego de golf)
+Ninja | Ninja
+ (juego ninja)
+1990's | 1990's
+ (juego de 1990)
+Old School | La vieja escuela
+ (juego de la vieja escuela)
+Software | Software
+ (juego de software)
+Utilidades | Utilidades
+ (utilidades game)
+Desarrollo de Juegos | Desarrollo de s
+ (desarrollo de juegos game)
+Education | Educativo
+ (juego educativo)
+Basketball | Baloncesto
+ (juego de baloncesto)
+Design & Illustration | Diseño e ilustración
+ (juego de diseño e ilustración)
+Generación procedural | Generación procedural
+ (generación procedural game)
+Perma death | Muerte perma
+ (juego de muerte perma)
+Souls-like | Souls-like
+ (juego de almas)
+Cyberpunk | Cyberpunk
+ (juego cyberpunk)
+3D Vision | Visión 3d
+ (juego de visión 3d)
+TrackIR | Pista
+ (juego de pista)
+Illuminati | Illuminati
+ (juego de illuminati)
+NSFW | NSFW
+ (juego nsfw)
+Wrestling | Lucha
+ (juego de lucha)
+Wargame | Guerra
+ (juego de juego de guerra)
+Artificial Intelligence | Inteligencia artificial
+ (juego de inteligencia artificial)
+1980s | 1980s
+ (juego de los años ochenta)
+Rome | Roma
+ (juego de roma)
+Silent Protagonist | Protagonistas silenciosos
+ (juego de protagonistas silenciosos)
+Arena Shooter | Disparos de arena
+ (juego de disparos de arena)
+Metroidvania | Metroidvania
+ (metroidwani)
+Hardware | Hardware
+ (juego de hardware)
+Steam Machine | Máquina de vapor
+ (juego de máquina de vapor)
+Epic | Épico
+ (juego épico)
+Dog | Perros
+ (juego de perros)
+Sniper | Francotirador
+ (juego de francotirador)
+Nonlinear | No lineal
+ (juego no lineal)
+Mystery Dungeon | Mazmorras misteriosas
+ (juego de mazmorras misteriosas)
+Hacking | Hacking
+ (juego de piratería)
+Werewolves | Hombres lobo
+ (juego de hombres lobo)
+Lara Croft | Lara croft
+ (juego de lara croft)
+Music | Música
+ (juego de música)
+Rhythm | Ritmo
+ (juego de ritmo)
+Sailing | Navegación
+ (juego de navegación)
+Flight | Vuelo
+ (juego de vuelo)
+Jet | Jet
+ (juego de reacción)
+America | América
+ (juego de américa)
+Clicker | Clicker
+ (juego de clicker)
+Dinosaurs | Dinosaurios
+ (juego de dinosaurios)
+Gun Customization | Personalización de armas
+ (juego de personalización de armas)
+Diplomacy | Diplomacia
+ (juego de diplomacia)
+Class-Based | Basado en clases
+ (juego basado en clases)
+Baseball | Beisbol
+ (juego de beisbol)
+Nature | La naturaleza
+ (juego de la naturaleza)
+Experimental | Experimental
+ (juego experimental)
+Bullet Time | Tiempo de bala
+ (juego de tiempo de bala)
+Mining | Minero
+ (juego minero)
+Top-Down Shooter | Tiro de arriba hacia abajo
+ (juego de tiro de arriba hacia abajo)
+Shoot 'Em Up | Shoot 'Em Up
+ (dispara el juego)
+Twin Stick Shooter | Tiradores de twin stick
+ (juego de tiradores de twin stick)
+Soccer | Fútbol
+ (juego de fútbol)
+Football | Partido de fútbol
+ (partido de fútbol)
+Addictive | Adictivo
+ (juego adictivo)
+Trains | Trenes
+ (juego de trenes)
+Interactive Fiction | Ficción interactivo
+ (juego de ficción interactivo)
+Politics | Político
+ (juego político)
+Sokoban | Sokoban
+ (la placa inferior es un ojo)
+Programming | Programación
+ (juego de programación)
+Logic | Lógico
+ (juego lógico)
+Hand-drawn | Dibujado a mano
+ (juego dibujado a mano)
+Protagonista villano | Protagonista villano
+ (protagonista villano game)
+Intercambios | Intercambios
+ (intercambios game)
+Unforgiving | Implacable
+ (juego implacable)
+Time Manipulation | Manipulación de tiempo
+ (juego de manipulación de tiempo)
+Lovecraftian | Lovecraftiano
+ (juego de lovecraftiano)
+Gothic | Gótico
+ (juego gótico)
+Vampire | Vampiros
+ (juego de vampiros)
+Supernatural | Sobrenatural
+ (juego sobrenatural)
+Underwater | Submarino
+ (juego submarino)
+Animation & Modeling | Animación y modelado
+ (juego de animación y modelado)
+Mars | Mars
+ (marte como)
+Emotional | Emocional
+ (juego emocional)
+MOBA | MOBA
+ (juego moba)
+Cartoon | Dibujos animados
+ (juego de dibujos animados)
+Mouse only | Solo ratón
+ (juego de solo ratón)
+Touch-Friendly | Táctil
+ (juego táctil)
+Chess | Ajedrez
+ (ajedrez)
+RPGMaker | RPGMaker
+ (juego de rpgmaker)
+Lore-Rich | Rico en tradiciones
+ (juego rico en tradiciones)
+Automation | Automatización
+ (juego de automatización)
+Comic Book | Cómics
+ (juego de cómics)
+Submarine | Submarino
+ (juego submarino)
+Quick-Time Events | Eventos de tiempo rápido
+ (juego de eventos de tiempo rápido)
+Faith | Fe
+ (juego de fe)
+Generación procedural basado en música | Generación procedural basado en música
+ (generación procedural basado en música game)
+Modern | Moderno
+ (juego moderno)
+Inventory Management | Gestión de inventario
+ (juego de gestión de inventario)
+Superhero | Superhéroes
+ (juego de superhéroes)
+Pinball | Pinball
+ (juego de pinball)
+Surreal | Surrealista
+ (juego surrealista)
+Investigation | Investigación
+ (juego de investigación)
+Thriller | Thriller
+ (juego de thriller)
+Co-op Campaign | Campaña cooperativa
+ (juego de campaña cooperativa)
+Match 3 | Match 3
+ (juego 3 juego)
+Movimiento en grilla | Movimiento en grilla
+ (movimiento en grilla game)
+Web Publishing | Publicación web
+ (juego de publicación web)
+Software Training | Entrenamiento de software
+ (juego de entrenamiento de software)
+Hidden Object | Objetos ocultos
+ (juego de objetos ocultos)
+Underground | Subterráneo
+ (juego subterráneo)
+Narration | Narración
+ (juego de narración)
+Sequel | Secuela
+ (juego de secuela)
+Benchmark | Benchmark
+ (juego de referencia)
+Producción de video | Producción de video
+ (producción de video game)
+Psychedelic | Psicodélico
+ (juego psicodélico)
+Batman | Batman
+ (juego de batman)
+Conspiracy | Conspiración
+ (juego de conspiración)
+Cats | Gatos
+ (juego de gatos)
+Minimalist | Minimalista
+ (juego minimalista)
+Tutorial | Tutorial
+ (juego tutorial)
+Soundtrack | Banda sonora
+ (juego de banda sonora)
+GameMaker | 
+ (juego de juego)
+LEGO | Lego
+ (juego de lego)
+Skateboarding | Skate
+ (juego de skate)
+Skating | Patinaje
+ (juego de patinaje)
+Score Attack | Ataque de puntaje
+ (juego de ataque de puntaje)
+Motorbike | Motos
+ (juego de motos)
+Text-Based | Basado en texto
+ (juego basado en texto)
+Transportation | Transporte
+ (juego de transporte)
+Transhumanism | Transhumanismo
+ (juego de transhumanismo)
+FMV | FMV
+ (juego de fmv)
+Typing | Escritura
+ (juego de escritura)
+Abstract | Abstracto
+ (juego abstracto)
+Experience | Experiencia
+ (juego de experiencia)
+Otome | Otome
+ (otome juego)
+Asynchronous Multiplayer | Multijugador asíncrono
+ (juego multijugador asíncrono)
+Audio Production | Producción de audio
+ (juego de producción de audio)
+On-Rails Shooter | Tiradores en rieles
+ (juego de tiradores en rieles)
+360 Video | Video 360
+ (videojuego 360)
+Movie | Cine
+ (juego de cine)
+Time Attack | Ataque de tiempo
+ (juego de ataque de tiempo)
+Martial Arts | Artes marciales
+ (juego de artes marciales)
+Snow | Nieve
+ (juego de nieve)
+Cycling | Ciclismo
+ (juego de ciclismo)
+Bikes | Bicicletas
+ (juego de bicicletas)
+Intentionally Awkward Controls | Intencionalmente incómodo de control
+ (juego intencionalmente incómodo de control)
+Apuestas | Apuestas
+ (apuestas game)
+6DOF | 6DOF
+ (6dof juego)
+Tennis | Tenis
+ (juego de tenis)
+Voice Control | Control de voz
+ (juego de control de voz)
+Time Management | Gestión del tiempo
+ (juego de gestión del tiempo)
+Hockey | Hockey
+ (juego de hockey)
+Motocross | Motocross
+ (juego de motocross)
+ATV | ATV
+ (juego de atv)
+Photo Editing | Edición de fotos
+ (juego de edición de fotos)
+BMX | BMX
+ (juego de bmx)
+Lemmings | Lemmings
+ (juego de lemmings)
+Runner | Runner
+ (juego de runner)
+Gaming | 
+ (juego de juego)
+Foreign | Extranjero
+ (juego extranjero)
+Snowboarding | Snowboard
+ (juego de snowboard)
+Skiing | Esquí
+ (juego de esquí)
+Solitaire | Solitario
+ (juego solitario)
+Pool | Billar
+ (juego de billar)
+Documentary | Documental
+ (juego documental)
+Word Game | Palabras
+ (juego de palabras)
+Feature Film | Largometraje
+ (juego de largometraje)
+Spelling | Ortografía
+ (juego de ortografía)
