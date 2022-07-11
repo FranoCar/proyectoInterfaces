@@ -1,4 +1,4 @@
-from app import app, render_template, request,  redirect, url_for
+from app import app, render_template, request,  redirect, url_for, sqlite3
 
 @app.route("/")
 def root():
@@ -10,7 +10,12 @@ def recomendaciones():
 
 @app.route("/catalogo")
 def catalogo():
-	return render_template('catalogo.html')
+	con = sqlite3.connect('app/appdb.db')
+	cur = con.cursor()
+	cur.execute('SELECT id,titulo,caratula,cal_usr,cal_exp,precio,oferta FROM juego')
+	juegos = cur.fetchall()
+	con.close()
+	return render_template('catalogo.html',juegos=juegos)
 
 @app.route("/noticias")
 def noticias():
