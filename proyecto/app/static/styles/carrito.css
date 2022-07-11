@@ -1,3 +1,7 @@
+.container-subtotal {
+    display: flex;
+    justify-content: flex-end;
+}
 .subtotal {
     height: 500px;
     width: 600px;
@@ -6,7 +10,28 @@
     padding: 20px;
 }
 
-.subtotal .h2 {
+.h2-carrito {
     display: inline-block;
     margin-right: 100px;
+    margin-top: 20px;
+}
+
+hr.carrito {
+    margin-top: 20px;
+    border: 1px solid #7787A6;
+}
+
+.btn-pagar {
+    border-radius: 10px;
+    padding: 20px 50px;
+    color: #FFFF80;
+    background-color: #F23568;
+    margin: 150px 201px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-pagar:hover {
+    background-color: #80F2E7;
+    cursor: pointer;
 }
