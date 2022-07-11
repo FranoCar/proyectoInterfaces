@@ -65,3 +65,14 @@
 .flickity-button:hover {
   background: #80F2E7;
 }
+
+/*PRUEBA JUEGO*/
+.carousel-nav {
+  width: 120px;
+  margin-left: 10px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.carousel-nav .carousel-cell.is-nav-selected {
+  background: #ED2;
+}

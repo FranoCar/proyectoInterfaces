@@ -1,0 +1,12 @@
+.subtotal {
+    height: 500px;
+    width: 600px;
+    background-color: #0F2859;
+    margin: 25px 50px 75px 100px;
+    padding: 20px;
+}
+
+.subtotal .h2 {
+    display: inline-block;
+    margin-right: 100px;
+}
