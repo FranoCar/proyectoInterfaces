@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<header class="header">
-			<a href="#" class="a a-btn-atras">&#8249;</a>
+			<button onclick="history.back()" class="btn-atras">&#8249;</button>
 			<nav>
 			   <ul class="nav-links">
 					<li><a class="is-active">Carrito</a></li>
@@ -19,9 +19,9 @@
 			</div>
 		</header>
 		<div id="modalPago" class="modal-pago">
-			<!-- Modal content -->
 			<div class="modal-content">
 			  <div class="pago-box">
+				<div class="pago-box-box"></div>
 				<button id="close" class="btn-cancelar">CANCELAR</button>
 			  </div>
 			  <div class="pago-box">
@@ -53,16 +53,16 @@
 		// Get the button that opens the modal
 		var btn = document.getElementById("pago");
 		
-		// Get the <span> element that closes the modal
-		var span = document.getElementById("close");
+		// Get the <btnClose> element that closes the modal
+		var btnClose = document.getElementById("close");
 		
 		// When the user clicks the button, open the modal 
 		btn.onclick = function() {
 		  modal.style.display = "block";
 		}
 		
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
+		// When the user clicks on <btnClose>, close the modal
+		btnClose.onclick = function() {
 		  modal.style.display = "none";
 		}
 		

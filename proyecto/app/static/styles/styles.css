@@ -29,10 +29,14 @@ li, a {
     color:#7787A6;
     text-decoration: none;
 }
-.a-btn-atras {
+.btn-atras {
+    background-color: Transparent;
+    border: none;
+    color: #7787A6;
+    cursor: pointer;
     font-size: 80px;
 }
-.a-btn-atras:hover {
+.btn-atras:hover {
     color: #80F2E7;
 }
 /* para que no se vea como una lista*/

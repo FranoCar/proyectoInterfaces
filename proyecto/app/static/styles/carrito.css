@@ -47,7 +47,7 @@ hr.carrito {
     padding: 20px 50px;
     color: #F2F2F2;
     background-color: #082040;
-    margin: 150px 201px;
+    margin: 70px 50px;
     font-size: 13px;
     font-weight: 600;
 }
@@ -102,6 +102,12 @@ hr.carrito {
     height: 550px;
     margin: 10px 10px 10px 10px;
     padding: 10px;
+}
+
+.pago-box-box {
+    width: 500px;
+    height: 400px;
+    background-color: #FDFFB1;
 }
 
 .modal-pago img {
