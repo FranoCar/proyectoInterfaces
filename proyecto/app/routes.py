@@ -47,7 +47,11 @@ def juego():
 	cur.execute('SELECT tag FROM tagjuego WHERE juego == ?',(idJuego,))
 	tags = cur.fetchall()
 	cur.execute('SELECT genero FROM generojuego WHERE juego == ?',(idJuego,))
-	generos = cur.fetchall()
+	aux = cur.fetchall()
+	generos = ""
+	for g in aux:
+		generos = generos + ', ' + g[0]
+	generos = generos[2:]
 
 	con.close()
 	return render_template('juego.html',juego=juego,
