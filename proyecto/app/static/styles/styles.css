@@ -108,6 +108,7 @@ h2 {
 /* botón MÁS en recomendaciones */
 .btn-mas {
     border-radius: 20px;
+    border: none;
     padding: 10px 20px;
     color: #F2F2F2;
     background-color: #F23568;
