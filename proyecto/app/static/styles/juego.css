@@ -57,3 +57,12 @@ h2 {
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+#detalles3 p{
+	font-weight: bold;
+}
+#detalles4 p{
+	font-weight: bold;
+}
+#detalles6 p{
+	font-weight: bold;
+}
