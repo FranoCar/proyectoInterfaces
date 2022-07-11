@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 		<link rel="stylesheet" href="static/styles/carousel.css">
+		<link rel="stylesheet" href="static/styles/carrito.css">
 		<title>Pagina</title>
 	</head>
 	<body>
@@ -29,7 +30,7 @@
 		</header>
 		<div class="container">
 			<h1>{{ juego[1] }}</h1>
-		</div>
+			
 		<div class="detalles"id=detalles1>
 			<h2>Calificación</h2>
 			<a>Usuarios</a>
@@ -45,6 +46,10 @@
 			{% else %}
 			<h2>{{ juego[6] }}</h2>
 			{% endif %}
+			<button class="btn-pagar btn-pagar-3">
+				<img src="static/img/cart.png" alt="Carrito">
+				AGREGAR
+			</button>
 		</div>
 		<div class="detalles" id="detalles2">
 			<h2>Descripción</h2>
@@ -73,6 +78,7 @@
 			{% for genero in generos %}
 				<p>{{ genero[0] }}</p>
 			{% endfor %}
+		</div>
 		</div>
 		
 	</body>
