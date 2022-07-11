@@ -36,7 +36,25 @@ def juego():
 	# La idea es llamar a esta url tipo url_for("juego",id=[idJuego]), 
 	# para que aparezca como argumento en la url (ej: /juego?id=2198379).
 	idJuego = request.args.get('id') 
-	return render_template('juego.html',juego=idJuego)
+	con = sqlite3.connect('app/appdb.db')
+	cur = con.cursor()
+	cur.execute('SELECT * FROM juego WHERE id == ?',(idJuego,))
+	juego = cur.fetchone()
+	cur.execute('SELECT editor FROM editorjuego WHERE juego == ?',(idJuego,))
+	editores = cur.fetchall()
+	cur.execute('SELECT desarrollador FROM desarrolladorjuego WHERE juego == ?',(idJuego,))
+	desarrolladores = cur.fetchall()
+	cur.execute('SELECT tag FROM tagjuego WHERE juego == ?',(idJuego,))
+	tags = cur.fetchall()
+	cur.execute('SELECT genero FROM generojuego WHERE juego == ?',(idJuego,))
+	generos = cur.fetchall()
+
+	con.close()
+	return render_template('juego.html',juego=juego,
+										editores=editores,
+										desarrolladores=desarrolladores,
+										tags=tags,
+										generos=generos)
 
 @app.route("/noticia")
 def noticia():

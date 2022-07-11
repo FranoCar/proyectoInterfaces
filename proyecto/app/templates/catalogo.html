@@ -34,8 +34,9 @@
 						<div class="row">
 					{% endif %}
 							<div class="item">
-								<img src="{{ juego[2] }}" alt="{{ juego[1] }}"><br>
-								<a>{{ juego[1] }}</a>
+								<a href="{{ url_for('.juego',id=juego[0]) }}">
+									<img src="{{ juego[2] }}" alt="{{ juego[1] }}"><br>{{ juego[1] }}
+								</a>
 							</div>
 					{% set counter.value = counter.value + 1 %}
 					{% if counter.value  == 5 %}

@@ -28,7 +28,51 @@
 			</div>
 		</header>
 		<div class="container">
-			<h1>Juego</h1>
+			<h1>{{ juego[1] }}</h1>
+		</div>
+		<div class="detalles"id=detalles1>
+			<h2>Calificación</h2>
+			<a>Usuarios</a>
+			<h2>{{ juego[4] }}</h2>
+			<a>Expertos</a>
+			<h2>{{ juego[5] }}</h2>
+			<h2>Tu calificación</h2>
+			<p>(aquí van estrellitas)</p>
+			<h2>Precio</h2>
+			{% if juego[7] != juego[6] %}
+			<h2><s>{{ juego[6] }}</s></h2>
+			<h2>{{ juego[7] }}</h2>
+			{% else %}
+			<h2>{{ juego[6] }}</h2>
+			{% endif %}
+		</div>
+		<div class="detalles" id="detalles2">
+			<h2>Descripción</h2>
+			<p>{{ juego[3] }}</p>
+		</div>
+		<div class="detalles" id="detalles3">
+			<h2>Editor</h2>
+			{% for editor in editores %}
+				<p>{{ editor[0] }}</p>
+			{% endfor %}
+		</div>
+		<div class="detalles" id="detalles4">
+			<h2>Desarrollador</h2>
+			{% for desarrollador in desarrolladores %}
+				<p>{{ desarrollador[0] }}</p>
+			{% endfor %}
+		</div>
+		<div class="detalles" id="detalles5">
+			<h2>Etiquetas</h2>
+			{% for tag in tags %}
+				<p>{{ tag[0] }}</p>
+			{% endfor %}
+		</div>
+		<div class="detalles" id="detalles6">
+			<h2>Géneros</h2>
+			{% for genero in generos %}
+				<p>{{ genero[0] }}</p>
+			{% endfor %}
 		</div>
 		
 	</body>
