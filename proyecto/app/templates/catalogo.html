@@ -3,6 +3,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="static/styles/styles.css">
+		<link rel="stylesheet" href="static/styles/catalogo.css">
+		<link rel="stylesheet" href="static/styles/jquery.paginate.css">
+		<script src="//code.jquery.com/jquery.min.js"></script>
+		<script src="static/scripts/jquery.paginate.js"></script>
+
 		<title>Pagina</title>
 	</head>
 	<body>
@@ -22,5 +27,31 @@
 				<img src="static/img/user.png" alt="Usuario">	
 			</div>
 		</header>
+			<div class="lista" id="lista">
+				{% set counter = namespace(value=0) %}
+				{% for juego in juegos %}
+					{% if counter.value == 0 %}
+						<div class="row">
+					{% endif %}
+							<div class="item">
+								<img src="{{ juego[2] }}" alt="{{ juego[1] }}"><br>
+								<a>{{ juego[1] }}</a>
+							</div>
+					{% set counter.value = counter.value + 1 %}
+					{% if counter.value  == 5 %}
+						{% set counter.value = 0 %}	
+						</div>
+					{% endif %}
+				{% endfor %}
+				{% if counter.value  != 0 %}
+						</div>
+				{% endif %}
+			</div>
+		<script>
+			$('#lista').paginate({
+				scope: $('div'),// targets all div elements
+			});
+		</script>
+		
 	</body>
 </html>
