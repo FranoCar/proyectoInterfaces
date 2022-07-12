@@ -23,7 +23,12 @@ def noticias():
 
 @app.route("/biblioteca")
 def biblioteca():
-	return render_template('biblioteca.html')
+	con = sqlite3.connect('app/appdb.db')
+	cur = con.cursor()
+	cur.execute('SELECT id,titulo,caratula FROM juego')
+	juegos = cur.fetchall()
+	con.close()
+	return render_template('biblioteca.html',juegos=juegos)
 
 @app.route("/carrito")
 def carrito():
