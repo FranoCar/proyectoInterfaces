@@ -8,7 +8,8 @@
 		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 		<link rel="stylesheet" href="static/styles/carousel.css">
 		<link rel="stylesheet" href="static/styles/carrito.css">
-		<title>Pagina</title>
+		<title>Catálogo</title>
+		<link rel="stylesheet" href="static/styles/juego.css">
 	</head>
 	<body>
 		<header class="header">
@@ -29,57 +30,68 @@
 			</div>
 		</header>
 		<div class="container">
-			<h1>{{ juego[1] }}</h1>
+			<div class="detalles float-child" id="imagenes">
+				<h1>{{ juego[1] }}</h1>
+				<p>Aquí iría mi carrusel si tuviera uno :D</p>
+			</div>
 			
-		<div class="detalles"id=detalles1>
-			<h2>Calificación</h2>
-			<a>Usuarios</a>
-			<h2>{{ juego[4] }}</h2>
-			<a>Expertos</a>
-			<h2>{{ juego[5] }}</h2>
-			<h2>Tu calificación</h2>
-			<p>(aquí van estrellitas)</p>
-			<h2>Precio</h2>
-			{% if juego[7] != juego[6] %}
-			<h2><s>{{ juego[6] }}</s></h2>
-			<h2>{{ juego[7] }}</h2>
-			{% else %}
-			<h2>{{ juego[6] }}</h2>
-			{% endif %}
-			<button class="btn-pagar btn-pagar-3">
-				<img src="static/img/cart.png" alt="Carrito">
-				AGREGAR
-			</button>
+			<div class="detalles float-child"id=detalles1>
+				<h2>Calificación</h2>
+				<div class="float-child">
+					<a>Usuarios</a>
+					<h2>{{ juego[4] }}</h2>
+				</div>
+				<div class="float-child">
+					<a>Expertos</a>
+					<h2>{{ juego[5] }}</h2>
+				</div>
+				<h2>Tu calificación</h2>
+				<p>(aquí van estrellitas)</p>
+				<h2>Precio</h2>
+				{% if juego[7] != juego[6] %}
+				<div class="float-child">
+					<h2><s>{{ juego[6] }}</s></h2>
+				</div>
+				<div class="float-child">
+					<h2>{{ juego[7] }}</h2>
+				</div>
+				{% else %}
+				<h2>{{ juego[6] }}</h2>
+				{% endif %}
+				<button class="btn-pagar btn-pagar-3">
+					<img src="static/img/cart.png" alt="Carrito">
+					AGREGAR
+				</button>
+			</div>
+			<div class="detalles float-child" id="detalles2">
+				<h2>Descripción</h2>
+				<p>{{ juego[3] }}</p>
+			</div>
+			<div class="float-child">
+				<div class="detalles" id="detalles3">
+					<h2>Editor</h2>
+					{% for editor in editores %}
+						<p>{{ editor[0] }}</p>
+					{% endfor %}
+				</div>
+				<div class="detalles" id="detalles4">
+					<h2>Desarrollador</h2>
+					{% for desarrollador in desarrolladores %}
+						<p>{{ desarrollador[0] }}</p>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="detalles" id="detalles5">
+				<h2>Etiquetas</h2>
+				{% for tag in tags %}
+					<p>{{ tag[0] }}</p>
+				{% endfor %}
+			</div>
+			<div class="detalles" id="detalles6">
+				<h2>Géneros</h2>
+				<p>{{ generos }}</p>
+			</div>
 		</div>
-		<div class="detalles" id="detalles2">
-			<h2>Descripción</h2>
-			<p>{{ juego[3] }}</p>
-		</div>
-		<div class="detalles" id="detalles3">
-			<h2>Editor</h2>
-			{% for editor in editores %}
-				<p>{{ editor[0] }}</p>
-			{% endfor %}
-		</div>
-		<div class="detalles" id="detalles4">
-			<h2>Desarrollador</h2>
-			{% for desarrollador in desarrolladores %}
-				<p>{{ desarrollador[0] }}</p>
-			{% endfor %}
-		</div>
-		<div class="detalles" id="detalles5">
-			<h2>Etiquetas</h2>
-			{% for tag in tags %}
-				<p>{{ tag[0] }}</p>
-			{% endfor %}
-		</div>
-		<div class="detalles" id="detalles6">
-			<h2>Géneros</h2>
-			{% for genero in generos %}
-				<p>{{ genero[0] }}</p>
-			{% endfor %}
-		</div>
-		</div>
-		
+
 	</body>
 </html>
