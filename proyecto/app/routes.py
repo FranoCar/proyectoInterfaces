@@ -36,13 +36,23 @@ def carrito():
 
 #----------------    La idea es solo usar 1 html para estos     ----------------
 #---------------- elementos y cambiar su contenido usando un id ----------------
-@app.route("/juego")
+@app.route("/juego", methods = ['GET','POST'])
 def juego():
 	# La idea es llamar a esta url tipo url_for("juego",id=[idJuego]), 
 	# para que aparezca como argumento en la url (ej: /juego?id=2198379).
 	idJuego = request.args.get('id') 
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
+	cur.execute('SELECT * FROM carrito WHERE juego == ?',(idJuego,))
+	existente = cur.fetchone()	
+	if request.method == 'POST': #Agregar a carrito
+		if existente is None:
+			cur.execute('INSERT INTO carrito VALUES (?)',(idJuego,))
+			con.commit()
+	
+	encarrito=True
+	if existente is None:
+		encarrito= False
 	cur.execute('SELECT * FROM juego WHERE id == ?',(idJuego,))
 	juego = cur.fetchone()
 	precio = int(float(juego[6].strip('$'))*1000)
@@ -67,7 +77,8 @@ def juego():
 										editores=editores,
 										desarrolladores=desarrolladores,
 										tags=tags,
-										generos=generos)
+										generos=generos,
+										encarrito=encarrito)
 
 @app.route("/noticia")
 def noticia():

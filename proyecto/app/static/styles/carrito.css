@@ -48,6 +48,15 @@ hr.carrito {
 	width:  15%;
 	height: 15%;
 }
+.btn-disabled{
+    /*background-color: #80F2E7;*/
+}
+.btn-disabled img {
+    display: none;
+}
+.btn-disabled:hover {
+    cursor:default;
+}
 .btn-pagar:hover {
     background-color: #80F2E7;
     cursor: pointer;
