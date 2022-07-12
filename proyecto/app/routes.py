@@ -30,9 +30,21 @@ def biblioteca():
 	con.close()
 	return render_template('biblioteca.html',juegos=juegos)
 
-@app.route("/carrito")
+@app.route("/carrito", methods = ['GET','POST'])
 def carrito():
-	return render_template('carrito.html')
+	con = sqlite3.connect('app/appdb.db')
+	cur = con.cursor()
+	if request.method == 'POST':
+		if 'borrar' in request.form:
+			cur.execute('DELETE FROM carrito WHERE juego==?',(request.form['borrar'],))
+			con.commit()
+	cur.execute('SELECT * FROM carrito')
+	ids = cur.fetchall()
+	juegos = []
+	for id_j in ids:
+		cur.execute('SELECT * FROM juego WHERE id==?',(id_j[0],))
+		juegos.append(cur.fetchone())
+	return render_template('carrito.html',juegos=juegos)
 
 #----------------    La idea es solo usar 1 html para estos     ----------------
 #---------------- elementos y cambiar su contenido usando un id ----------------
@@ -45,18 +57,23 @@ def juego():
 	cur = con.cursor()
 	cur.execute('SELECT * FROM carrito WHERE juego == ?',(idJuego,))
 	existente = cur.fetchone()	
+	encarrito=True
+	
 	if request.method == 'POST': #Agregar a carrito
 		if existente is None:
 			cur.execute('INSERT INTO carrito VALUES (?)',(idJuego,))
 			con.commit()
-	
-	encarrito=True
-	if existente is None:
-		encarrito= False
+	else:
+		if existente is None:
+			encarrito= False
 	cur.execute('SELECT * FROM juego WHERE id == ?',(idJuego,))
 	juego = cur.fetchone()
-	precio = int(float(juego[6].strip('$'))*1000)
-	oferta = int(float(juego[7].strip('$'))*1000)
+	precio = 0
+	oferta = 0
+	if '$' in juego[6]:
+		precio = int(float(juego[6].strip('$'))*1000)
+		oferta = int(float(juego[7].strip('$'))*1000)
+
 	cur.execute('SELECT editor FROM editorjuego WHERE juego == ?',(idJuego,))
 	editores = cur.fetchall()
 	cur.execute('SELECT desarrollador FROM desarrolladorjuego WHERE juego == ?',(idJuego,))
