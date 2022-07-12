@@ -6,7 +6,16 @@ def root():
 
 @app.route("/recomendaciones")
 def recomendaciones():
-	return render_template('recomendaciones.html')
+	con = sqlite3.connect('app/appdb.db')
+	cur = con.cursor()
+	cur.execute('SELECT id,titulo,caratula,precio,oferta FROM juego WHERE substring(precio,2,1) > substring(oferta,2,1) ORDER BY precio LIMIT 3')
+	ofertas = cur.fetchall()
+	cur.execute('SELECT id,titulo,caratula,precio,oferta FROM juego LIMIT 3')
+	novs = cur.fetchall()
+	cur.execute('SELECT id,titulo,caratula,precio,oferta,gj.juego FROM juego, generojuego as gj WHERE gj.juego = id AND gj.genero="Acción" ORDER BY id DESC LIMIT 3')
+	jugados = cur.fetchall()
+	con.close()
+	return render_template('recomendaciones.html', ofertas=ofertas, novs=novs, jugados=jugados)
 
 @app.route("/catalogo")
 def catalogo():

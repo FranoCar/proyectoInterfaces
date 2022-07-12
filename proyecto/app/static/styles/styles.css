@@ -138,3 +138,21 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     color: #7787A6;
 }
+
+.amogus {
+    width:25%;
+}
+
+.porcentaje {
+    position: absolute;
+    top: 0px;
+    right: 523px;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.porcentaje h2 {
+    margin: 0;
+    font-size: 32px;
+}
