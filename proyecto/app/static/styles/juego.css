@@ -17,7 +17,7 @@ h2 {
 	border-right: 10px solid #082040;
 }
 #detalles1 {
-    height: 600px;
+  height: 600px;
 	padding: 20px;
 	border-left: 10px solid #082040;
 	background-color: #082040;
@@ -28,7 +28,7 @@ h2 {
 }
 #detalles2{
 	text-align: justify;
-  	text-justify: inter-word;
+	text-justify: inter-word;
 }
 #detalles5 p{
 	float: left;

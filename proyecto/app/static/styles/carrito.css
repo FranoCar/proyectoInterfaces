@@ -1,13 +1,38 @@
-.container-subtotal {
+/*.container-subtotal {
     display: flex;
     justify-content: flex-end;
-}
+}*/
 .subtotal {
+    width: 50%;
+    float: left;
     height: 500px;
     width: 600px;
     background-color: #0F2859;
     margin: 25px 50px 75px 100px;
     padding: 20px;
+}
+.lista-juegos{
+    width: 45%;
+    float: left;
+    margin: 25px 50px 75px 100px;
+    padding: 20px;
+}
+.item-carrito{
+    display: flex;
+    align-items: center;
+    background-color: #80F2E7;
+    margin: 10px;
+    padding: 20px;
+}
+.item-carrito img{
+    width: 10%;
+    height: 10%;
+    float:  left;
+}
+.item-carrito p{
+    margin-left: 10px;
+    margin-right: 10px;
+    float:  left;
 }
 
 .h2-carrito {
