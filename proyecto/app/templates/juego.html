@@ -48,15 +48,15 @@
 				<h2>Tu calificación</h2>
 				<p>(aquí van estrellitas)</p>
 				<h2>Precio</h2>
-				{% if juego[7] != juego[6] %}
+				{% if oferta < precio %}
 				<div class="float-child">
-					<h2><s>{{ juego[6] }}</s></h2>
+					<h2><s>{{ "$" + precio|string +" clp" }}</s></h2>
 				</div>
 				<div class="float-child">
-					<h2>{{ juego[7] }}</h2>
+					<h2>{{ "$" + oferta|string + " clp" }}</h2>
 				</div>
 				{% else %}
-				<h2>{{ juego[6] }}</h2>
+				<h2>{{ "$" + precio|string +" clp" }}</h2>
 				{% endif %}
 				<button class="btn-pagar btn-pagar-3">
 					<img src="static/img/cart.png" alt="Carrito">

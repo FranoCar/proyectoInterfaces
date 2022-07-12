@@ -45,6 +45,8 @@ def juego():
 	cur = con.cursor()
 	cur.execute('SELECT * FROM juego WHERE id == ?',(idJuego,))
 	juego = cur.fetchone()
+	precio = int(float(juego[6].strip('$'))*1000)
+	oferta = int(float(juego[7].strip('$'))*1000)
 	cur.execute('SELECT editor FROM editorjuego WHERE juego == ?',(idJuego,))
 	editores = cur.fetchall()
 	cur.execute('SELECT desarrollador FROM desarrolladorjuego WHERE juego == ?',(idJuego,))
@@ -60,6 +62,8 @@ def juego():
 
 	con.close()
 	return render_template('juego.html',juego=juego,
+										precio=precio,
+										oferta=oferta,
 										editores=editores,
 										desarrolladores=desarrolladores,
 										tags=tags,
