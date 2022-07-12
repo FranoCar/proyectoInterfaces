@@ -147,12 +147,32 @@ p {
     position: absolute;
     top: 0px;
     right: 523px;
-    background-color: black;
-    color: white;
+    background-color: rgba(242, 53, 104, 0.5882352941176471);
+    color: #FFFF80;
+    border-style: solid;
     padding-left: 10px;
     padding-right: 10px;
 }
 .porcentaje h2 {
     margin: 0;
     font-size: 32px;
+    color: #FFFF80;
+}
+.precio {
+    position: absolute;
+    bottom: 0px;
+    right: 523px;
+    background-color: #0F2859;
+    color: #FFFF80;
+    border-style: dashed;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.precio h4 {
+    color:#F2F2F2;
+}
+.precio h2 {
+    margin: 0;
+    font-size: 32px;
+    color: #FFFF80;
 }

@@ -8,7 +8,7 @@ def root():
 def recomendaciones():
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
-	cur.execute('SELECT id,titulo,caratula,precio,oferta FROM juego WHERE substring(precio,2,1) > substring(oferta,2,1) ORDER BY precio LIMIT 3')
+	cur.execute('SELECT id,titulo,caratula,precio,oferta FROM juego WHERE precio > oferta ORDER BY precio LIMIT 3')
 	ofertas = cur.fetchall()
 	cur.execute('SELECT id,titulo,caratula,precio,oferta FROM juego LIMIT 3')
 	novs = cur.fetchall()
@@ -77,12 +77,8 @@ def juego():
 			encarrito= False
 	cur.execute('SELECT * FROM juego WHERE id == ?',(idJuego,))
 	juego = cur.fetchone()
-	precio = 0
-	oferta = 0
-	if '$' in juego[6]:
-		precio = int(float(juego[6].strip('$'))*1000)
-		oferta = int(float(juego[7].strip('$'))*1000)
-
+	precio = juego[6]
+	oferta = juego[7]
 	cur.execute('SELECT editor FROM editorjuego WHERE juego == ?',(idJuego,))
 	editores = cur.fetchall()
 	cur.execute('SELECT desarrollador FROM desarrolladorjuego WHERE juego == ?',(idJuego,))
