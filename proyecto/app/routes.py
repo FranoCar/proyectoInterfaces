@@ -25,7 +25,7 @@ def noticias():
 def biblioteca():
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
-	cur.execute('SELECT id,titulo,caratula FROM juego')
+	cur.execute('SELECT id,titulo,caratula FROM juego limit 5')
 	juegos = cur.fetchall()
 	con.close()
 	return render_template('biblioteca.html',juegos=juegos)
