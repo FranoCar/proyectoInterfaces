@@ -1,0 +1,28 @@
+/* caja que contiene los 5 juegos recientes*/
+.resumen {
+
+    height: 200px;
+    background-color: #0c2f62;
+    margin: 7px 10px 20px 20px;
+    border: 5px;
+    border-style: double;
+    border-color: #7787A6;
+    width: 1820px;
+    overflow: hidden;
+    display: flex;
+}
+/* caja de juego resumido*/
+.res-game{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color:#0f2859;
+}
+
+.resumen .res-game{
+    margin: auto ;
+}
+
+/*.photo{
+
+}*/
