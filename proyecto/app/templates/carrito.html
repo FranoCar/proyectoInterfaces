@@ -40,6 +40,7 @@
 				<div class="item-carrito">
 					<img src="{{ juego[2] }}" alt="{{ juego[1] }}">
 					<p>{{ juego[1] }}</p>
+					<p>{{ precios[loop.index - 1] }}</p>
 					<form action="{{ url_for('.carrito') }}"method="POST">
 						<button style="color:red" name="borrar" value="{{ juego[0] }}">borrar</button>
 					</form>
@@ -48,7 +49,7 @@
 		</div>
 		<div class="subtotal">
 			<h2 class="h2-carrito">Subtotal</h2>
-			<h2 class="h2-carrito">0</h2>
+			<h2 class="h2-carrito">{{ total }}</h2>
 			<hr class="carrito">
 			<h2 class="h2">Cupón de descuento</h2>
 			<button id="pago" class="btn-pagar btn-pagar-1">PAGAR</button>

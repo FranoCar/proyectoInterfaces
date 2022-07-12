@@ -23,6 +23,9 @@
 			<div class="user-cart">
 				<a href="../carrito">
 					<img src="static/img/cart.png" alt="Carrito">
+					{% if carrito > 0 %}
+						<span class="contador">{{ carrito }}</span>
+					{% endif %}
 				</a>
 				<img src="static/img/user.png" alt="Usuario">	
 			</div>
