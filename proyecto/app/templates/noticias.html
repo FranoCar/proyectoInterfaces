@@ -11,6 +11,10 @@
 		<link rel="stylesheet" type="text/css" href="static/styles/recomendaciones.css">
 		<link rel="stylesheet" href="static/styles/noticias.css">
 
+		<link rel="stylesheet" href="static/styles/jquery.paginate.css">
+		<script src="//code.jquery.com/jquery.min.js"></script>
+		<script src="static/scripts/jquery.paginate.js"></script>
+
 
 		<title>Noticias</title>
 	</head>
@@ -38,13 +42,18 @@
 			<h2>Tu día</h2>
 		</div>
 		<div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true, "lazyLoad": true }'>
-			{% for noticia in noticias %}
+			{% for noticia in noticias[:4] %}
 			<div class="carousel-cell carousel-cell-rec">
 				<div class="area-noticia">
 					<a href="{{ noticia[5] }}">
 						<img class="carousel-cell-image child-left" data-flickity-lazyload="{{ noticia[4] }}" alt="{{ noticia[1] }}">
 						<div class="titulo">
-							<h2>{{ noticia[1] }}</h2>
+							<h2>{{ noticia[1][:100] }}...</h2>
+							<p>{{ noticia[6][:280] }}...</p>
+						</div>
+						<div class="foot">
+							<h3 class="a">{{noticia[3][8:10]}}/{{noticia[3][5:7]}}/{{noticia[3][:4]}}</h3>
+							<h3 class="b">{{noticia[2]}}</h3>
 						</div>
 					</a>
 				</div>
@@ -54,5 +63,27 @@
 		<div class="container container-1">
 			<h2>Noticias</h2>
 		</div>
+		<div class="lista-noticias"id="lista">
+			{% for noticia in noticias[:4] %}
+				<div class="item-noticia">
+					<a href="{{ noticia[5] }}">
+						<img class="child-left" src="{{ noticia[4] }}" alt="{{ noticia[1] }}">
+						<div class="titulo">
+							<h2>{{ noticia[1][:100] }}...</h2>
+							<p>{{ noticia[6][:280] }}...</p>
+						</div>
+						<div class="foot">
+							<h3 class="a">{{noticia[3][8:10]}}/{{noticia[3][5:7]}}/{{noticia[3][:4]}}</h3>
+							<h3 class="b">{{noticia[2]}}</h3>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+		<script>
+			$('#lista').paginate({
+				scope: $('div'),// targets all div elements
+			});
+		</script>
 	</body>
 </html>

@@ -33,7 +33,7 @@ def noticias():
 	carrito = getCarrito()
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
-	cur.execute('select * from noticia order by fecha')
+	cur.execute('select * from noticia order by fecha DESC')
 	noticias = cur.fetchall()
 
 	con.close()
