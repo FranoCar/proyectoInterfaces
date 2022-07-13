@@ -74,6 +74,7 @@ hr.carrito {
 	height: 15%;
 }
 .btn-disabled{
+    opacity: 0.7;
     /*background-color: #80F2E7;*/
 }
 .btn-disabled img {
@@ -125,21 +126,6 @@ hr.carrito {
     margin: auto;
     border: 1px solid #FFFF80;
     width: 90%;
-}
-  
-  /* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-  
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .pago-box {

@@ -32,6 +32,18 @@
 				<img src="static/img/user.png" alt="Usuario">	
 			</div>
 		</header>
+
+		<div id="popupCarrito" class="popup-carrito">
+			<div class="popup-content">
+				<h2>¡Juego añadido al carrito!</h2>
+				<button id="irCatalogo" class="btnPopup">
+					Volver al catálogo
+					
+				</button>
+				<button id="irCarrito" class="btnPopup">Ir al carrito</button>
+			</div>  
+		</div>
+
 		<div class="container">
 			<div class="detalles float-child" id="imagenes">
 				<h1>{{ juego[1] }}</h1>
@@ -64,17 +76,16 @@
 				<h2>{{ "$" + precio|string +" CLP" }}</h2>
 				{% endif %}
 				{% if encarrito%}
-					<button class="btn-pagar btn-pagar-3 btn-disabled" name="comprar" value="comprar" >
+					<button class="btn-pagar btn-pagar-3 btn-disabled" name="comprar" value="comprar">
 						<img src="static/img/cart.png" alt="Carrito">
 						EN CARRITO
 					</button>
 				{% else %}
-				<form action="{{ url_for('.juego',id=juego[0]) }}" method="post">
-					<button class="btn-pagar btn-pagar-3" name="comprar" value="comprar">
+				
+					<button id="agregarCarrito" class="btn-pagar btn-pagar-3" name="comprar" value="comprar">
 						<img src="static/img/cart.png" alt="Carrito">
 						AGREGAR
 					</button>
-				</form>
 				{% endif %}
 			</div>
 			<div class="detalles float-child" id="detalles2">
@@ -106,6 +117,31 @@
 				<p>{{ generos }}</p>
 			</div>
 		</div>
-
 	</body>
+	<script>
+		/*
+			<form action="{{ url_for('.juego',id=juego[0]) }}" method="post">
+			</form>
+		*/
+		var modalCarrito = document.getElementById("popupCarrito");
+		
+		var btnAgregar = document.getElementById("agregarCarrito");
+		
+		
+		var btnCarrito = document.getElementById("irCarrito");
+
+		var btnCatalogo = document.getElementById("irCatalogo");
+		 
+		btnAgregar.onclick = function() {
+			modalCarrito.style.display = "block";
+		}
+
+		btnCarrito.onclick = function() {
+			document.location.href = "carrito";
+		}
+
+		btnCatalogo.onclick = function() {
+		  document.location.href = "catalogo";
+		}
+	</script>
 </html>
