@@ -1,6 +1,7 @@
+/*********************CAJA DE RESUMEN***************************/
 /* caja que contiene los 5 juegos recientes*/
 .resumen {
-
+    padding: 10px;
     height: 300px;
     background-color: #0c2f62;
     margin: 7px 10px 20px 20px;
@@ -11,23 +12,111 @@
     overflow: hidden;
     display: flex;
 }
+/*titulo de RECIENTES*/
+.tit-resumen{
+    color:#D7D7D7;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 15px;
+}
 /* caja de juego resumido*/
 .res-game{
     position: relative;
     height: 200px;
     width: 330px;
+    border: 1px;
+    border-style: solid;
+    border-color:#7787A6;
     background-color:#0f2859;
+    /*overflow: hidden;*/
 }
-
-.resumen .res-game{
+/*caja de cada resumen dentro de el container de resumen*/
+.resumen .res-game {
     margin: 70px 18px 30px ;
 }
-
+/*foto de caratula */
 .photo{
-    height:100px;
-    width: 100px;
+    height:130px;
+    width: 130px;
     object-fit: contain;
 }
-/*.res-game .photo{
+/*foto de caratula en cada resumen de juego*/
+.res-game .photo{
+    margin: 20px 20px 10px;
+}
+/*titulo de resumen de juego*/
+.titulo{
+    color:aqua;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 130px;
+}
+/*container de progreso y logros*/
+.cont-context{
+    height: 170px;
+    width: 165px;
+}
+/* clase sup de titulos log y prog*/
+.subtitulos{
+    color:#D7D7D7;
+}
+/*text logros*/
+.logros{
+    width: 80px;
+}
+/*self explanatory name*/
+.icon-logro{
+    object-fit: contain;
+    height: 50px;
+    width: 120px;
+}
+/* test progreso*/
+.progreso{
+    width: 80px;
+}
+/*icono progreso*/
+.icon-progress{
+    object-fit: contain;
+    height:80px;
+    width: 80px;
+}
+/* alinea texto logros container*/
+.cont-context .logros{
+    margin: auto;
+}
+/*alinea texto porgreso en container*/
+.cont-context .progreso{
+    margin: auto;
+}
+/*alinea imagen progreso en container*/
+.cont-context .icon-progress{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* alinea imagen logro en container*/
+.cont-context .icon-logro{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ordena container de logros y progreso a la izquierda*/
+.res-game .cont-context{
+    position: absolute;
+    margin: 15px 1px 10px 155px;
+}
+/*el titulo dentro del container de cada resumen de juego*/
+.res-game .titulo {
+    text-align: left; 
+    margin-left: 20px;
+}
 
-}*/
+/*******************************FIN CAJA DE RESUMEN**********************************/
+
+/******************************JUEGOS INSTALADOS*************************************/
+
+
+
+/******************************FIN JUEGOS INSTALADOS*********************************/
+
