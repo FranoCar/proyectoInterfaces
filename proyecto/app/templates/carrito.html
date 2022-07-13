@@ -48,7 +48,7 @@
 
 		<div class="lista-juegos">
 			{% for juego in juegos %}
-				<div id="borrarPopups" class="modal-borrar">
+				<div id="borrarPopups{{ juego[0] }}" class="modal-borrar">
 					<div class="popup-content">
 						<h2>¿Desea borrar {{juego[1]}} del carrito?</h2>
 						<button class="btn-popup-borrar">No</button>
@@ -65,7 +65,7 @@
 				</div>
 				<script>
 					function amongas() {
-						var popup = document.getElementById("borrarPopups");
+						var popup = document.getElementById("borrarPopups{{ juego[0] }}");
 						popup.style.display = "block";
 					}
 				</script>
