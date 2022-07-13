@@ -46,7 +46,29 @@
 		<div class="container">
 			<div class="detalles float-child" id="imagenes">
 				<h1>{{ juego[1] }}</h1>
-				<p>Aquí iría mi carrusel si tuviera uno :D</p>
+				<div class="carousel-container">
+				  <!-- Flickity HTML init -->
+				  <div class="carousel-nav" >
+				    <div class="carousel-cell is-nav-selected"></div>
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				  </div>
+
+				  <div class="carousel carousel-main">
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				    <div class="carousel-cell"></div>
+				  </div>
+
+				</div>
 			</div>
 			
 			<div class="detalles float-child"id=detalles1>
@@ -117,9 +139,6 @@
 		</div>
 	</body>
 	<script>
-		/*
-
-		*/
 		var modalCarrito = document.getElementById("popupCarrito");
 		
 		var btnAgregar = document.getElementById("agregarCarrito");
@@ -140,5 +159,36 @@
 		btnCatalogo.onclick = function() {
 		  document.location.href = "catalogo";
 		}
+	</script>
+	<script >
+		// external js: flickity.pkgd.js
+
+var $carousel = $('.carousel').flickity();
+
+var $carouselNav = $('.carousel-nav');
+var $carouselNavCells = $carouselNav.find('.carousel-cell');
+
+$carouselNav.on( 'click', '.carousel-cell', function( event ) {
+  var index = $( event.currentTarget ).index();
+  $carousel.flickity( 'select', index );
+});
+
+var flkty = $carousel.data('flickity');
+var navTop  = $carouselNav.position().top;
+var navCellHeight = $carouselNavCells.height();
+var navHeight = $carouselNav.height();
+
+$carousel.on( 'select.flickity', function() {
+  // set selected nav cell
+  $carouselNav.find('.is-nav-selected').removeClass('is-nav-selected');
+  var $selected = $carouselNavCells.eq( flkty.selectedIndex )
+    .addClass('is-nav-selected');
+  // scroll nav
+  var scrollY = $selected.position().top +
+    $carouselNav.scrollTop() - ( navHeight + navCellHeight ) / 2;
+  $carouselNav.animate({
+    scrollTop: scrollY
+  });
+});
 	</script>
 </html>

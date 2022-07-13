@@ -13,10 +13,17 @@
 }
 .lista-juegos{
     width: 45%;
+    height: 550px;
     float: left;
-    margin: 25px 50px 75px 100px;
+    margin: 25px 50px 50px 100px;
     padding: 20px;
+    overflow-y: scroll;
 }
+
+.modal-content .lista-juegos {
+    height: 400px;
+}
+
 .item-carrito{
     display: flex;
     align-items: center;
@@ -24,6 +31,30 @@
     margin: 10px;
     padding: 20px;
 }
+
+.total {
+    position: absolute;
+    width: 38%;
+    height: 90px;
+    background-color: #FDFFB1;
+    margin-left: 0px;
+    margin-right: 550px;
+    margin-top: 440px;
+    margin-bottom: 0px;
+}
+.total h3 {
+    padding: 10px;
+}
+.total h2 {
+    margin: 0;
+    padding: 10px;
+    color: #082040;
+}
+
+.modal-content .item-carrito {
+    background-color: #FDFFB1;
+}
+
 .item-carrito .caratula{
     width: 10%;
     float: left;
@@ -92,12 +123,15 @@ hr.carrito {
 }
 
 .btn-cancelar {
+    position:absolute;
     border-radius: 8px;
     border: none;
     padding: 20px 50px;
     color: #F2F2F2;
     background-color: #082040;
-    margin: 70px 50px;
+    margin-top: 550px;
+    margin-left: 10px;
+    margin-right: 900px;
     font-size: 13px;
     font-weight: 600;
 }
@@ -127,14 +161,14 @@ hr.carrito {
     justify-content: center;
     background-color: #0F2859;
     margin: auto;
-    border: 1px solid #FFFF80;
+    border: 1px solid #80F2E7;
     width: 90%;
 }
 
 .pago-box {
     display: inline-block;
     width: 600px;
-    height: 550px;
+    height: 600px;
     margin: 10px 10px 10px 10px;
     padding: 10px;
 }
