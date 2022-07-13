@@ -4,6 +4,11 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="static/styles/styles.css">
 		<link rel="stylesheet" href="static/styles/carrito.css">
+		<script>
+			function seleccionar(id){
+				document.getElementById(id).classList.add('seleccionado');
+			}
+		</script>
 		<title>Carrito</title>
 	</head>
 	<body>
@@ -37,11 +42,13 @@
 				<button id="close" class="btn-cancelar">CANCELAR</button>
 			  <div class="pago-box">
 				<h2>Método de pago</h2>
-				<img id="pay1" src="static/img/webpay.png" alt="Webpay">
-				<img id="pay2" src="static/img/americanexpress.jpg" alt="AmericanExpress">
-				<img id="pay3" src="static/img/paypal.jpg" alt="Paypal">
-				<img id="pay4" src="static/img/visa.jpg" alt="Visa">
-				<button class="btn-pagar btn-pagar-2">PAGAR</button>
+				<img id="pay1" src="static/img/webpay.png" onclick="seleccionar(this.id)" alt="Webpay">
+				<img id="pay2" src="static/img/americanexpress.jpg" onclick="seleccionar(this.id)" alt="AmericanExpress">
+				<img id="pay3" src="static/img/paypal.jpg" onclick="seleccionar(this.id)" alt="Paypal">
+				<img id="pay4" src="static/img/visa.jpg" onclick="seleccionar(this.id)" alt="Visa">
+				<form action="{{ url_for('.carrito') }}" method="post">
+					<button class="btn-pagar btn-pagar-2" name="pagar" value="pagar">PAGAR</button>
+				</form>
 			  </div>  
 			</div>
 		</div>

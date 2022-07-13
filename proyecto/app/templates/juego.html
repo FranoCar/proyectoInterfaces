@@ -102,6 +102,11 @@
 						<img src="static/img/cart.png" alt="Carrito">
 						EN CARRITO
 					</button>
+				{% elif enbiblioteca %}
+					<button class="btn-pagar btn-pagar-3 btn-disabled" name="comprar" value="comprar">
+						<img src="static/img/cart.png" alt="Carrito">
+						YA ES TUYO
+					</button>
 				{% else %}
 					<button id="agregarCarrito" class="btn-pagar btn-pagar-3" name="comprar" value="comprar">
 						<img src="static/img/cart.png" alt="Carrito">
