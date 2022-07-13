@@ -171,6 +171,9 @@
     clear: left;
     height: 30%;
 }
+.lista {
+    clear: left;
+}
 .row:after {
     content: "";
     display: table;
