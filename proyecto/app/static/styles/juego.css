@@ -69,24 +69,24 @@ h2 {
 }
 
 .popup-carrito {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 200px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 200px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .popup-content {
-    background-color: #0F2859;
-    margin: auto;
+  background-color: #0F2859;
+  margin: auto;
 	padding: 10px;
-    border: 1px solid #80F2E7;
-    width: 25%;
+  border: 1px solid #80F2E7;
+  width: 25%;
 	height: 25%;
 }
 
@@ -97,13 +97,13 @@ h2 {
 .btnPopup {
 	border-radius: 8px;
 	width: 40%;
-    border: none;
-    padding: 10px;
+  border: none;
+  padding: 10px;
 	margin: 15px;
-    color:#F2F2F2;
-    background-color: #F23568;
-    font-size: 13px;
-    font-weight: 600;
+  color:#F2F2F2;
+  background-color: #F23568;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .btnPopup:hover {

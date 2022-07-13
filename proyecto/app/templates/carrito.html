@@ -48,14 +48,27 @@
 
 		<div class="lista-juegos">
 			{% for juego in juegos %}
+				<div id="borrarPopups" class="modal-borrar">
+					<div class="popup-content">
+						<h2>¿Desea borrar {{juego[1]}} del carrito?</h2>
+						<button class="btn-popup-borrar">No</button>
+						<button class="btn-popup-borrar">Sí</button>
+					</div>
+				</div>
 				<div class="item-carrito">
 					<img class="caratula" src="{{ juego[2] }}" alt="{{ juego[1] }}">
 					<p>{{ juego[1] }}</p>
 					<p><strong>${{ precios[loop.index - 1] }} CLP</strong></p>
-						<button class="btn-borrar" name="borrar" value="{{ juego[0] }}">
+						<button class="btn-borrar" name="borrar" value="{{ juego[0] }}" onclick="amongas()">
 							<img src="static/img/borrar.png" alt="Borrar">
 						</button>
 				</div>
+				<script>
+					function amongas() {
+						var popup = document.getElementById("borrarPopups");
+						popup.style.display = "block";
+					}
+				</script>
 			{% endfor %}
 		</div>
 		<div class="subtotal">
