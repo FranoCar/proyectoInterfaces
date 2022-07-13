@@ -36,11 +36,10 @@
 		<div id="popupCarrito" class="popup-carrito">
 			<div class="popup-content">
 				<h2>¡Juego añadido al carrito!</h2>
-				<button id="irCatalogo" class="btnPopup">
-					Volver al catálogo
-					
-				</button>
-				<button id="irCarrito" class="btnPopup">Ir al carrito</button>
+				<form action="{{ url_for('.juego',id=juego[0]) }}" method="post">
+					<button id="irCatalogo" class="btnPopup" name="comprar" value="catalogo">Volver al catálogo</button>
+					<button id="irCarrito" class="btnPopup" name="comprar" value="carrito">Ir al carrito</button>
+				</form>
 			</div>  
 		</div>
 
@@ -81,7 +80,6 @@
 						EN CARRITO
 					</button>
 				{% else %}
-				
 					<button id="agregarCarrito" class="btn-pagar btn-pagar-3" name="comprar" value="comprar">
 						<img src="static/img/cart.png" alt="Carrito">
 						AGREGAR
@@ -120,8 +118,7 @@
 	</body>
 	<script>
 		/*
-			<form action="{{ url_for('.juego',id=juego[0]) }}" method="post">
-			</form>
+
 		*/
 		var modalCarrito = document.getElementById("popupCarrito");
 		

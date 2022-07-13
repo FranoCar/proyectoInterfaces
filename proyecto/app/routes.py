@@ -91,6 +91,10 @@ def juego():
 		if existente is None:
 			cur.execute('INSERT INTO carrito VALUES (?)',(idJuego,))
 			con.commit()
+		if request.form['comprar'] == 'catalogo':
+			return redirect(url_for('catalogo'))
+		else:
+			return redirect(url_for('carrito'))
 	else:
 		if existente is None:
 			encarrito= False
