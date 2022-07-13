@@ -12,7 +12,7 @@
     overflow: hidden;
     display: flex;
 }
-/*titulo de RECIENTES*/
+/*titulo de RECIENTES y tus juegos*/
 .tit-resumen{
     color:#D7D7D7;
     position: absolute;
@@ -32,7 +32,10 @@
 }
 /*caja de cada resumen dentro de el container de resumen*/
 .resumen .res-game {
-    margin: 70px 18px 30px ;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 /*foto de caratula */
 .photo{
@@ -116,6 +119,25 @@
 
 /******************************JUEGOS INSTALADOS*************************************/
 
+.cont-juegos-inst{
+    /*background-color: cornflowerblue;*/
+    padding: 25px;
+    margin: 20px;
+    height: 700px;
+    width: 1820px;
+}
+
+.tit-juegos-inst{
+    color:#D7D7D7;
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+.cont-juegos-inst input[type=text] {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+}
 
 
 /******************************FIN JUEGOS INSTALADOS*********************************/
