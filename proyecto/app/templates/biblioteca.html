@@ -45,11 +45,11 @@
 			<h2 class="tit-juegos-inst">Tus juegos</h2>	
 			<div class="buscador">
 				<form action="{{ url_for('.biblioteca') }}" method="post">
-					<input type="text" name="nombre" placeholder="busca en tus juegos...">
-					<button name="buscar"> buscar</button>
-					<button name="filtro" value="alfabetico"> alfabetico</button>
-					<button name="filtro" value="instalado"> instalación</button>
-					<button name="filtro" value="jugado"> ultima vez jugado</button>
+					<input type="text" name="nombre" placeholder="Busca en tus juegos...">
+					<button class="btnBuscar" name="buscar"> Buscar</button>
+					<button id="alf" class="filtro" name="filtro" value="alfabetico"> Alfabético</button>
+					<button class="filtro" name="filtro" value="instalado"> Instalación</button>
+					<button class="filtro" name="filtro" value="jugado"> Última vez jugado</button>
 				</form>
 			</div>
 			<div id="modalJugar" class="modal-pago">

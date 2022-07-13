@@ -120,11 +120,10 @@
 /******************************JUEGOS INSTALADOS*************************************/
 
 .cont-juegos-inst{
-    /*background-color: cornflowerblue;*/
     padding: 25px;
     margin: 20px;
     height: 700px;
-    width: 1820px;
+    width: 90%;
 }
 
 .tit-juegos-inst{
@@ -154,7 +153,7 @@
     float:  left;
     text-align: center;
     height: 100%;
-    width: 14%;
+    width: 20%;
 }
 .item a{
     font-family: Arial, Helvetica, sans-serif;
@@ -208,4 +207,24 @@
     color: white;
     padding: 20px;
     height: 20%;
+}
+
+.filtro {
+    color: #D7D7D7;
+    margin-right: 30px;
+    padding: 10px;
+    border: none;
+    background-color:#0c2f62;
+}
+
+#alf {
+    margin-left: 200px;
+}
+
+.filtro:hover {
+    color: #0c2f62;
+    background-color:#80F2E7;
+}
+.btnBuscar {
+    padding: 11px;
 }
