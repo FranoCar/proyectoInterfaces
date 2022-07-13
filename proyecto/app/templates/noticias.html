@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="static/styles/styles.css">
 		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 		<link rel="stylesheet" type="text/css" href="static/styles/carousel.css">
+		<link rel="stylesheet" type="text/css" href="static/styles/recomendaciones.css">
+		<link rel="stylesheet" href="static/styles/noticias.css">
 
 
 		<title>Noticias</title>
@@ -25,6 +27,9 @@
 			<div class="user-cart">
 				<a href="../carrito">
 					<img src="static/img/cart.png" alt="Carrito">
+					{% if carrito > 0 %}
+						<span class="contador">{{ carrito }}</span>
+					{% endif %}
 				</a>
 				<img src="static/img/user.png" alt="Usuario">	
 			</div>
@@ -32,10 +37,19 @@
 		<div class="container container-1">
 			<h2>Tu día</h2>
 		</div>
-		<div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true}'>
-			<div class="carousel-cell carousel-cell-noticias"></div>
-			<div class="carousel-cell carousel-cell-noticias"></div>
-			<div class="carousel-cell carousel-cell-noticias"></div>
+		<div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true, "lazyLoad": true }'>
+			{% for noticia in noticias %}
+			<div class="carousel-cell carousel-cell-rec">
+				<div class="area-noticia">
+					<a href="{{ noticia[5] }}">
+						<img class="carousel-cell-image child-left" data-flickity-lazyload="{{ noticia[4] }}" alt="{{ noticia[1] }}">
+						<div class="titulo">
+							<h2>{{ noticia[1] }}</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+			{% endfor %}
 		</div>
 		<div class="container container-1">
 			<h2>Noticias</h2>

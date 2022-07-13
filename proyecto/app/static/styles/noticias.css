@@ -1,0 +1,23 @@
+.area-noticia {
+    position: relative;
+    background-color: #7787A6;
+    width: 1100px;
+}   
+.area-noticia a img{
+    width: 400px;
+    height: 250px;
+}
+.child-left{
+    float: left;
+}
+
+.titulo {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.titulo h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #FFFFFF;
+}

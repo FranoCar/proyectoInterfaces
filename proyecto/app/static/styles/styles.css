@@ -64,6 +64,11 @@ li, a {
 .header .user-cart{
     cursor: pointer;
 }
+.user-cart a{
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s;
+}
 /* posición y tamaño de carrito/usuario */
 .header .user-cart img{
     height: 80px;
@@ -74,6 +79,18 @@ li, a {
 /* para que el carrito y foto de usuario se agrande*/
 .header .user-cart img:hover{
     transform: scale(1.2);
+}
+.header .user-cart a:hover{
+    transform: scale(1.2);
+}
+.contador {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: #F23568;
+    color: white;
 }
 /****************
 
@@ -137,42 +154,4 @@ h3 {
 p {
     font-family: Arial, Helvetica, sans-serif;
     color: #7787A6;
-}
-
-.amogus {
-    width:25%;
-}
-
-.porcentaje {
-    position: absolute;
-    top: 0px;
-    right: 523px;
-    background-color: rgba(242, 53, 104, 0.5882352941176471);
-    color: #FFFF80;
-    border-style: solid;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.porcentaje h2 {
-    margin: 0;
-    font-size: 32px;
-    color: #FFFF80;
-}
-.precio {
-    position: absolute;
-    bottom: 0px;
-    right: 523px;
-    background-color: #0F2859;
-    color: #FFFF80;
-    border-style: dashed;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.precio h4 {
-    color:#F2F2F2;
-}
-.precio h2 {
-    margin: 0;
-    font-size: 32px;
-    color: #FFFF80;
 }

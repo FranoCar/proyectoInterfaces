@@ -6,9 +6,9 @@
     width: 50%;
     float: left;
     height: 500px;
-    width: 600px;
+    width: 520px;
     background-color: #0F2859;
-    margin: 25px 50px 75px 100px;
+    margin: 25px 25px 75px 100px;
     padding: 20px;
 }
 .lista-juegos{
@@ -24,14 +24,17 @@
     margin: 10px;
     padding: 20px;
 }
-.item-carrito img{
+.item-carrito .caratula{
     width: 10%;
+    float: left;
+    background-color: #7787A6;
     height: 10%;
-    float:  left;
 }
 .item-carrito p{
+    width: 300px;
     margin-left: 10px;
     margin-right: 10px;
+    color:#082040;
     float:  left;
 }
 
@@ -74,6 +77,7 @@ hr.carrito {
 	height: 15%;
 }
 .btn-disabled{
+    opacity: 0.7;
     /*background-color: #80F2E7;*/
 }
 .btn-disabled img {
@@ -126,21 +130,6 @@ hr.carrito {
     border: 1px solid #FFFF80;
     width: 90%;
 }
-  
-  /* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-  
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 .pago-box {
     display: inline-block;
@@ -163,4 +152,18 @@ hr.carrito {
 
 .modal-pago img:hover {
     border: 4px solid #F23568;
+}
+
+.btn-borrar {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-borrar img {
+    width: 70%;
+    height: 70%;
 }

@@ -1,0 +1,53 @@
+.area-click {
+    position: relative;
+    background-color: #7787A6;
+    width: 300px;
+}
+
+.porcentaje {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(242, 53, 104, 0.5882352941176471);
+    color: #FFFF80;
+    text-align: center;
+    border-radius: 15px 0px 0px 15px;
+    border-style: solid;
+    border-right: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.porcentaje h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #FFFF80;
+}
+.precio {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: #0F2859;
+    color: #FFFF80;
+    text-align: center;
+    border-style: dashed;
+    border-radius: 15px 0px 0px 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.precio-no-oferta {
+    color: #80F2E7;
+}
+.precio h4 {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#F2F2F2;
+}
+.precio h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #FFFF80;
+}
+.precio .no-oferta {
+    padding: 10px;
+    color:#F2F2F2;
+}

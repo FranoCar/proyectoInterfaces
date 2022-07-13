@@ -24,6 +24,9 @@
 			<div class="user-cart">
 				<a href="../carrito">
 					<img src="static/img/cart.png" alt="Carrito">
+					{% if carrito > 0 %}
+						<span class="contador">{{ carrito }}</span>
+					{% endif %}
 				</a>
 				<img src="static/img/user.png" alt="Usuario">	
 			</div>
@@ -34,7 +37,19 @@
 			<div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true, "lazyLoad": true }'>
 				{% for juego in ofertas %}
 				<div class="carousel-cell carousel-cell-rec">
-					<img class="carousel-cell-image" data-flickity-lazyload="{{ juego[2] }}" alt="{{ juego[2] }}">
+					<div class="area-click">
+						<a href="{{ url_for('.juego',id=juego[0]) }}">
+							<img class="carousel-cell-image" data-flickity-lazyload="{{ juego[2] }}" alt="{{ juego[2] }}">
+							<div class="porcentaje">
+								<h2>{{ ((juego[3] - juego[4]) / 100) | int }}%</h2>
+							</div>
+							<div class="precio">
+								<h4><s>${{ juego[3] }} CLP</s></h4>
+								<h2>${{ juego[4] }} CLP</h2>
+							</div>
+						</a>
+					</div>
+					
 				</div>
 				{% endfor %}
 			</div>
@@ -45,19 +60,24 @@
 			<div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true, "lazyLoad": true }'>
 				{% for juego in novs %}
 				<div class="carousel-cell carousel-cell-rec">
-					<div class="amogus">
+					<div class="area-click">
 						<a href="{{ url_for('.juego',id=juego[0]) }}">
 							<img class="carousel-cell-image" data-flickity-lazyload="{{ juego[2] }}" alt="{{ juego[2] }}">
-							<div class="porcentaje">
-								<h2>20%</h2>
+							{% if juego[3] == juego[4] %}
+							<div class="precio precio-no-oferta">
+								<h2 class="no-oferta"">${{ juego[4] }} CLP</h2>
 							</div>
-							<div class="precio">
-								<h4><s>{{ juego[3] }}</s></h4>
-								<h2>{{ juego[4] }}</h2>
-							</div>
+							{% else %}
+								<div class="porcentaje">
+									<h2>{{ ((juego[3] - juego[4]) / 100) | int }}%</h2>
+								</div>
+								<div class="precio">
+									<h4><s>${{ juego[3] }} CLP</s></h4>
+									<h2>${{ juego[4] }} CLP</h2>
+								</div>
+							{% endif %}
 						</a>
 					</div>
-					
 				</div>
 				{% endfor %}
 			</div>
@@ -68,7 +88,28 @@
 			<div class="carousel" data-flickity='{ "autoPlay": true, "wrapAround": true, "lazyLoad": true }'>
 				{% for juego in jugados %}
 				<div class="carousel-cell carousel-cell-rec">
-					<img class="carousel-cell-image" data-flickity-lazyload="{{ juego[2] }}" alt="{{ juego[2] }}">
+					<div class="area-click">
+						<a href="{{ url_for('.juego',id=juego[0]) }}">
+							<img class="carousel-cell-image" data-flickity-lazyload="{{ juego[2] }}" alt="{{ juego[2] }}">
+							{% if juego[3] == juego[4] %}
+							<div class="precio precio-no-oferta">
+								{% if juego[3] == 0 %}
+									<h2 class="no-oferta">Gratis</h2>
+								{% else %}
+									<h2 class="no-oferta"">${{ juego[4] }} CLP</h2>
+								{% endif %}
+							</div>
+							{% else %}
+								<div class="porcentaje">
+									<h2>{{ ((juego[3] - juego[4]) / 100) | int }}%</h2>
+								</div>
+								<div class="precio">
+									<h4><s>${{ juego[3] }} CLP</s></h4>
+									<h2>${{ juego[4] }} CLP</h2>
+								</div>
+							{% endif %}
+						</a>
+					</div>
 				</div>
 				{% endfor %}
 			</div>

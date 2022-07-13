@@ -1,4 +1,4 @@
-from app import app, render_template, request,  redirect, url_for, sqlite3
+from app import app, render_template, request,  redirect, url_for, sqlite3, getCarrito
 
 @app.route("/")
 def root():
@@ -14,30 +14,40 @@ def recomendaciones():
 	novs = cur.fetchall()
 	cur.execute('SELECT id,titulo,caratula,precio,oferta,gj.juego FROM juego, generojuego as gj WHERE gj.juego = id AND gj.genero="Acción" ORDER BY id DESC LIMIT 3')
 	jugados = cur.fetchall()
+	carrito = getCarrito()
 	con.close()
-	return render_template('recomendaciones.html', ofertas=ofertas, novs=novs, jugados=jugados)
+	return render_template('recomendaciones.html', ofertas=ofertas, novs=novs, jugados=jugados, carrito=carrito)
 
 @app.route("/catalogo")
 def catalogo():
+	carrito = getCarrito()
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
 	cur.execute('SELECT id,titulo,caratula,cal_usr,cal_exp,precio,oferta FROM juego')
 	juegos = cur.fetchall()
 	con.close()
-	return render_template('catalogo.html',juegos=juegos)
+	return render_template('catalogo.html',juegos=juegos,carrito=carrito)
 
 @app.route("/noticias")
 def noticias():
-	return render_template('noticias.html')
+	carrito = getCarrito()
+	con = sqlite3.connect('app/appdb.db')
+	cur = con.cursor()
+	cur.execute('select * from noticia order by fecha')
+	noticias = cur.fetchall()
+
+	con.close()
+	return render_template('noticias.html',carrito=carrito,noticias=noticias)
 
 @app.route("/biblioteca")
 def biblioteca():
+	carrito = getCarrito()
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
 	cur.execute('SELECT id,titulo,caratula FROM juego limit 5')
 	juegos = cur.fetchall()
 	con.close()
-	return render_template('biblioteca.html',juegos=juegos)
+	return render_template('biblioteca.html',juegos=juegos,carrito=carrito)
 
 @app.route("/carrito", methods = ['GET','POST'])
 def carrito():
@@ -50,10 +60,19 @@ def carrito():
 	cur.execute('SELECT * FROM carrito')
 	ids = cur.fetchall()
 	juegos = []
+	precios = []
+	total = 0
 	for id_j in ids:
 		cur.execute('SELECT * FROM juego WHERE id==?',(id_j[0],))
-		juegos.append(cur.fetchone())
-	return render_template('carrito.html',juegos=juegos)
+		juego = cur.fetchone()
+		if juego[6] == juego[7]:
+			precios.append(juego[6])
+			total = total + juego[6]
+		else:
+			precios.append(juego[7])
+			total = total + juego[7]
+		juegos.append(juego)
+	return render_template('carrito.html',juegos=juegos,precios=precios,total=total)
 
 #----------------    La idea es solo usar 1 html para estos     ----------------
 #---------------- elementos y cambiar su contenido usando un id ----------------
@@ -72,6 +91,10 @@ def juego():
 		if existente is None:
 			cur.execute('INSERT INTO carrito VALUES (?)',(idJuego,))
 			con.commit()
+		if request.form['comprar'] == 'catalogo':
+			return redirect(url_for('catalogo'))
+		else:
+			return redirect(url_for('carrito'))
 	else:
 		if existente is None:
 			encarrito= False
@@ -93,6 +116,7 @@ def juego():
 	generos = generos[2:]
 
 	con.close()
+	carrito = getCarrito()
 	return render_template('juego.html',juego=juego,
 										precio=precio,
 										oferta=oferta,
@@ -100,7 +124,8 @@ def juego():
 										desarrolladores=desarrolladores,
 										tags=tags,
 										generos=generos,
-										encarrito=encarrito)
+										encarrito=encarrito,
+										carrito=carrito)
 
 @app.route("/noticia")
 def noticia():
