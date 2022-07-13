@@ -110,3 +110,60 @@ h2 {
     background-color: #80F2E7;
     cursor: pointer;
 }
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel-container {
+  display: flex;
+}
+
+.carousel {
+  background: #082040;
+  margin-bottom: 40px;
+  flex-grow: 1;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 300px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 300px;
+  font-size: 80px;
+  color: white;
+}
+
+.carousel-nav {
+  width: 120px;
+  margin-left: 10px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.carousel-nav .carousel-cell {
+  height: 80px;
+  width: 100px;
+  margin: 0 0 5px 0;
+  cursor: pointer;
+}
+
+.carousel-nav .carousel-cell:before {
+  font-size: 50px;
+  line-height: 80px;
+}
+
+.carousel-nav .carousel-cell.is-nav-selected {
+  background: #ED2;
+}
