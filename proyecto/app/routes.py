@@ -18,32 +18,31 @@ def recomendaciones():
 	con.close()
 	return render_template('recomendaciones.html', ofertas=ofertas, novs=novs, jugados=jugados, carrito=carrito)
 
-@app.route("/catalogo", methods = ['GET','POST'])
+@app.route("/catalogo")
 def catalogo():
 	carrito = getCarrito()
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
-	if request.method == 'POST':
-		if len(request.form["nombre"]) > 0:
-			cur.execute(f'''	SELECT id,titulo,caratula,cal_usr,cal_exp,precio,oferta 
-							FROM juego
-							WHERE titulo LIKE "%{request.form["nombre"]}%" ''')
-		else:
-			cur.execute('SELECT id,titulo,caratula,cal_usr,cal_exp,precio,oferta FROM juego')	
-	else:
-		cur.execute('SELECT id,titulo,caratula,cal_usr,cal_exp,precio,oferta FROM juego')
-
+	cur.execute('SELECT id,titulo,caratula,cal_usr,cal_exp,precio,oferta FROM juego')
 	juegos = cur.fetchall()
 
 	con.close()
 	return render_template('catalogo.html',juegos=juegos,carrito=carrito)
 
-@app.route("/noticias")
+@app.route("/noticias", methods = ['GET','POST'])
 def noticias():
 	carrito = getCarrito()
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
-	cur.execute('select * from noticia order by fecha DESC')
+	if request.method == 'POST':
+		if len(request.form["nombre"]) > 0:
+			cur.execute(f'''SELECT * FROM noticia
+							WHERE titulo LIKE "%{request.form["nombre"]}%" 
+							ORDER BY fecha DESC''')
+		else:
+			cur.execute('select * from noticia order by fecha DESC')
+	else:
+		cur.execute('select * from noticia order by fecha DESC')
 	noticias = cur.fetchall()
 
 	con.close()

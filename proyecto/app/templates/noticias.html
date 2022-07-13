@@ -63,6 +63,12 @@
 		<div class="container container-1">
 			<h2>Noticias</h2>
 		</div>
+		<div class="buscador">
+			<form action="{{ url_for('.noticias') }}" method="post">
+				<input type="text" placeholder="buscar" name="nombre">
+				<input type="submit" name="buscar" value="Buscar">
+			</form>
+		</div>
 		<div class="lista-noticias"id="lista">
 			{% for noticia in noticias[:4] %}
 				<div class="item-noticia">

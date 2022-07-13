@@ -30,12 +30,6 @@
 				<img src="static/img/user.png" alt="Usuario">	
 			</div>
 		</header>
-			<div class="buscador">
-				<form action="{{ url_for('.catalogo') }}" method="post">
-					<input type="text" placeholder="buscar" name="nombre">
-					<input type="submit" name="buscar" value="Buscar">
-				</form>
-			</div>
 			<div class="lista" id="lista">
 				{% set counter = namespace(value=0) %}
 				{% for juego in juegos %}

@@ -19,7 +19,19 @@
     height: 200px;
     margin: 20px;
 }
-
+.buscador{
+    margin-left:6%;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    width: 800px;
+}
+input[type=text] {
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
 .child-left{
     float: left;
 }
