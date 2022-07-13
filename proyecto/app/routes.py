@@ -44,10 +44,12 @@ def biblioteca():
 	carrito = getCarrito()
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
-	cur.execute('SELECT id,titulo,caratula FROM juego limit 5')
+	cur.execute('SELECT id,titulo,caratula FROM juego limit 4')
 	juegos = cur.fetchall()
+	cur.execute('SELECT id,titulo,caratula FROM juego order by id DESC limit 10 ')
+	juegos_G = cur.fetchall()
 	con.close()
-	return render_template('biblioteca.html',juegos=juegos,carrito=carrito)
+	return render_template('biblioteca.html',juegos=juegos,carrito=carrito,juegos_G=juegos_G)
 
 @app.route("/carrito", methods = ['GET','POST'])
 def carrito():
