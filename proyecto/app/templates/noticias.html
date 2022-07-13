@@ -65,8 +65,8 @@
 		</div>
 		<div class="buscador">
 			<form action="{{ url_for('.noticias') }}" method="post">
-				<input type="text" placeholder="buscar" name="nombre">
-				<input type="submit" name="buscar" value="Buscar">
+				<input type="text" placeholder="Buscar" name="nombre">
+				<input id="btnBusc" type="submit" name="buscar" value="Buscar">
 			</form>
 		</div>
 		<div class="lista-noticias"id="lista">
