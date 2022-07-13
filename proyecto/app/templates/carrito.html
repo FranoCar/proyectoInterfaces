@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="static/styles/styles.css">
 		<link rel="stylesheet" href="static/styles/carrito.css">
-		<title>>Carrito</title>
+		<title>Carrito</title>
 	</head>
 	<body>
 		<header class="header">
@@ -37,18 +37,20 @@
 		<div class="lista-juegos">
 			{% for juego in juegos %}
 				<div class="item-carrito">
-					<img src="{{ juego[2] }}" alt="{{ juego[1] }}">
+					<img class="caratula" src="{{ juego[2] }}" alt="{{ juego[1] }}">
 					<p>{{ juego[1] }}</p>
-					<p>{{ precios[loop.index - 1] }}</p>
-					<form action="{{ url_for('.carrito') }}"method="POST">
-						<button style="color:red" name="borrar" value="{{ juego[0] }}">borrar</button>
+					<p><strong>${{ precios[loop.index - 1] }} CLP</strong></p>
+					<form action="{{ url_for('.carrito') }}" method="POST">
+						<button class="btn-borrar" name="borrar" value="{{ juego[0] }}">
+							<img src="static/img/borrar.png" alt="Borrar">
+						</button>
 					</form>
 				</div>
 			{% endfor %}
 		</div>
 		<div class="subtotal">
 			<h2 class="h2-carrito">Subtotal</h2>
-			<h2 class="h2-carrito">{{ total }}</h2>
+			<h2 class="h2-carrito">${{ total }} CLP</h2>
 			<hr class="carrito">
 			<h2 class="h2">Cupón de descuento</h2>
 			<button id="pago" class="btn-pagar btn-pagar-1">PAGAR</button>
@@ -56,7 +58,6 @@
 		
 	</body>
 	<script>
-		//Cerrar pago
 		var modal = document.getElementById("modalPago");
 		
 		var btn = document.getElementById("pago");
