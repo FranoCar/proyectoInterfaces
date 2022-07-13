@@ -48,12 +48,12 @@ def noticias():
 	con.close()
 	return render_template('noticias.html',carrito=carrito,noticias=noticias)
 
-@app.route("/biblioteca")
+@app.route("/biblioteca", methods = ['GET','POST'])
 def biblioteca():
 	carrito = getCarrito()
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
-	cur.execute("select * from biblioteca order by ultima limit 4")
+	cur.execute("select * from biblioteca order by ultima desc limit 4")
 	biblioteca = cur.fetchall()
 	juegosjugados = []
 	for b in biblioteca:
@@ -61,13 +61,33 @@ def biblioteca():
 		juegosjugados.append(cur.fetchone())
 	cur.execute("select * from biblioteca order by instalado desc, esta_instalado")
 	biblioteca = cur.fetchall()
+	if request.method == 'POST':
+		if 'filtro' in request.form:
+			if request.form['filtro'] == 'alfabetico':
+				cur.execute("select * from biblioteca order by esta_instalado desc,juego asc")
+			elif request.form['filtro'] == 'instalado':
+				cur.execute("select * from biblioteca order by esta_instalado desc,instalado desc")
+			else:
+				cur.execute("select * from biblioteca order by esta_instalado desc,ultima desc")
+			biblioteca = cur.fetchall()
+		elif len(request.form["nombre"]) > 0:
+			print(request.form["nombre"])
+			cur.execute(f'''SELECT * from biblioteca as B, (SELECT id FROM juego
+							WHERE titulo LIKE "%{request.form["nombre"]}%") as J
+							WHERE B.juego = J.id''')
+			biblioteca = cur.fetchall()
 	juegosinstalados = []
+	instalado = []
 	for b in biblioteca:
 		cur.execute('SELECT id,titulo,caratula FROM juego where id=?',(b[0],))
 		juegosinstalados.append(cur.fetchone())
-	
+		instalado.append(b[3])
+		
 	con.close()
-	return render_template('biblioteca.html',juegos_j=juegosjugados,carrito=carrito,juegos_i=juegosinstalados)
+	return render_template('biblioteca.html',	juegos_j=juegosjugados,
+												carrito=carrito,
+												juegos_i=juegosinstalados,
+												instalado=instalado)
 
 @app.route("/carrito", methods = ['GET','POST'])
 def carrito():
@@ -76,6 +96,14 @@ def carrito():
 	if request.method == 'POST':
 		if 'borrar' in request.form:
 			cur.execute('DELETE FROM carrito WHERE juego==?',(request.form['borrar'],))
+			con.commit()
+		elif 'pagar' in request.form:
+			cur.execute('SELECT * FROM carrito')
+			ids = cur.fetchall()
+			for id_j in ids:
+				cur.execute('INSERT INTO biblioteca VALUES (?,?,?,?)',
+								(id_j[0],'2000-01-01','2000-01-01',0))
+				cur.execute('DELETE FROM carrito WHERE juego=?',(id_j[0],))
 			con.commit()
 	cur.execute('SELECT * FROM carrito')
 	ids = cur.fetchall()
@@ -104,11 +132,13 @@ def juego():
 	con = sqlite3.connect('app/appdb.db')
 	cur = con.cursor()
 	cur.execute('SELECT * FROM carrito WHERE juego == ?',(idJuego,))
-	existente = cur.fetchone()	
+	existente = cur.fetchone()
+	cur.execute('SELECT * FROM biblioteca WHERE juego == ?',(idJuego,))
+	comprado = cur.fetchone()	
 	encarrito=True
-	
+	enbiblioteca=True
 	if request.method == 'POST': #Agregar a carrito
-		if existente is None:
+		if existente is None and comprado is None:
 			cur.execute('INSERT INTO carrito VALUES (?)',(idJuego,))
 			con.commit()
 		if request.form['comprar'] == 'catalogo':
@@ -118,6 +148,9 @@ def juego():
 	else:
 		if existente is None:
 			encarrito= False
+		if comprado is None:
+			enbiblioteca = False
+
 	cur.execute('SELECT * FROM juego WHERE id == ?',(idJuego,))
 	juego = cur.fetchone()
 	precio = juego[6]
@@ -145,6 +178,7 @@ def juego():
 										tags=tags,
 										generos=generos,
 										encarrito=encarrito,
+										enbiblioteca=enbiblioteca,
 										carrito=carrito)
 
 @app.route("/noticia")

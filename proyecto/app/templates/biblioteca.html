@@ -44,10 +44,18 @@
 		<div class ="cont-juegos-inst">
 			<h2 class="tit-juegos-inst">Tus juegos</h2>	
 			<div class="buscador">
-				<input type="text" placeholder="busca en tus juegos...">
-				<h3> filtro alfabetico</h3>
-				<h3> filtro por instalacion</h3>
-				<h3> filtro ultima vez jugado</h3>
+				<form action="{{ url_for('.biblioteca') }}" method="post">
+					<input type="text" name="nombre" placeholder="busca en tus juegos...">
+					<button name="buscar"> buscar</button>
+					<button name="filtro" value="alfabetico"> alfabetico</button>
+					<button name="filtro" value="instalado"> instalación</button>
+					<button name="filtro" value="jugado"> ultima vez jugado</button>
+				</form>
+			</div>
+			<div id="modalJugar" class="modal-pago">
+				<div class="modal-content">				
+					<h1>Jugando...</h1>
+				</div>
 			</div>
 			<div class="lista" id="lista">
 				{% set counter = namespace(value=0) %}
@@ -55,11 +63,19 @@
 					{% if counter.value == 0 %}
 						<div class="row">
 					{% endif %}
+							{% if instalado[loop.index-1]%}	
 							<div class="item">
-								<a href="{{ url_for('.juego',id=juego[0]) }}">
+								<a onclick="jugar()">
 									<img src="{{ juego[2] }}" alt="{{ juego[1] }}"><br>{{ juego[1] }}
 								</a>
 							</div>
+							{% else %}
+							<div class="item item-noinstalado">
+								<a >
+									<img src="{{ juego[2] }}" alt="{{ juego[1] }}"><br>{{ juego[1] }}
+								</a>
+							</div>
+							{% endif %}
 					{% set counter.value = counter.value + 1 %}
 					{% if counter.value  == 5 %}
 						{% set counter.value = 0 %}	
@@ -71,5 +87,30 @@
 				{% endif %}
 			</div>
 		</div>
+		<script>
+		function jugar() {
+			var popup = document.getElementById("modalJugar");
+			popup.style.display = "block";
+
+			window.onclick = function(event) {
+			  if (event.target == popup) {
+			    popup.style.display = "none";
+			  }
+			}
+		}
+		/*var modal = document.getElementById("modalPago");
+		
+		var btn = document.getElementById("pago");
+		
+		var btnClose = document.getElementById("close");
+		 
+		btn.onclick = function() {
+		  modal.style.display = "block";
+		}
+		
+		btnClose.onclick = function() {
+		  modal.style.display = "none";
+		}*/
+	</script>
 	</body>
 </html>
