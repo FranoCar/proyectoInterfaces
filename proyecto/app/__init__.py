@@ -6,6 +6,7 @@ def getCarrito():
 	cur = con.cursor()
 	cur.execute('select count(juego) from carrito')
 	n = cur.fetchone()[0]
+	con.close()
 	return n
 #----------------- Aquí hacer todos los imports y funciones y variables globales!!! -----------------
 # Luego se importan los paquetes en routes.py de forma: "from app import [paquete,función o variable en __init__.py]"

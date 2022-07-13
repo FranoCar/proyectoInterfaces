@@ -31,7 +31,13 @@ def catalogo():
 @app.route("/noticias")
 def noticias():
 	carrito = getCarrito()
-	return render_template('noticias.html',carrito=carrito)
+	con = sqlite3.connect('app/appdb.db')
+	cur = con.cursor()
+	cur.execute('select * from noticia order by fecha')
+	noticias = cur.fetchall()
+
+	con.close()
+	return render_template('noticias.html',carrito=carrito,noticias=noticias)
 
 @app.route("/biblioteca")
 def biblioteca():
