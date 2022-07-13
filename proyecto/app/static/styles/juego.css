@@ -81,7 +81,7 @@ h2 {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.popup-content {
+.popup-contentCarrito {
   background-color: #0F2859;
   margin: auto;
 	padding: 10px;
@@ -107,6 +107,7 @@ h2 {
 }
 
 .btnPopup:hover {
+    color: #0F2859;
     background-color: #80F2E7;
     cursor: pointer;
 }

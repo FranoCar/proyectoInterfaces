@@ -51,22 +51,33 @@
 				<div id="borrarPopups{{ juego[0] }}" class="modal-borrar">
 					<div class="popup-content">
 						<h2>¿Desea borrar {{juego[1]}} del carrito?</h2>
-						<button class="btn-popup-borrar">No</button>
-						<button class="btn-popup-borrar">Sí</button>
+						<div class="prueba-borrar">
+							<button id="no-borrar{{ juego[0] }}" class="btn-popup-borrar btn-no">No</button>
+							<form action="{{ url_for('.carrito') }}" method="POST">
+								<button name="borrar" value="{{ juego[0] }}" id="borrar{{ juego[0] }}" class="btn-popup-borrar">Sí</button>
+							</form>	
+						</div>		
 					</div>
 				</div>
 				<div class="item-carrito">
 					<img class="caratula" src="{{ juego[2] }}" alt="{{ juego[1] }}">
 					<p>{{ juego[1] }}</p>
 					<p><strong>${{ precios[loop.index - 1] }} CLP</strong></p>
-						<button class="btn-borrar" name="borrar" value="{{ juego[0] }}" onclick="amongas()">
+						<button class="btn-borrar"  onclick="borrar{{juego[0]}}()">
 							<img src="static/img/borrar.png" alt="Borrar">
 						</button>
 				</div>
 				<script>
-					function amongas() {
+					function borrar{{juego[0]}}() {
 						var popup = document.getElementById("borrarPopups{{ juego[0] }}");
 						popup.style.display = "block";
+
+						var btnNo = document.getElementById("no-borrar{{ juego[0] }}");
+						var btnSi = document.getElementById("borrar{{ juego[0] }}");
+
+						btnNo.onclick = function() {
+							popup.style.display = "none";
+						}
 					}
 				</script>
 			{% endfor %}

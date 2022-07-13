@@ -181,20 +181,47 @@ hr.carrito {
     background-color: #0F2859;
     margin: auto;
     border: 1px solid #80F2E7;
-    width: 30%;
-    height: 25%;
+    width: 40%;
+    height: 30%;
+}
+
+.popup-content h2 {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .btn-popup-borrar {
     border-radius: 8px;
-	width: 40%;
+	width: 50px;
     border: none;
     padding: 10px;
-	margin: 15px;
+	margin: 20px 30px;
     color:#F2F2F2;
     background-color: #F23568;
     font-size: 13px;
     font-weight: 600;
+}
+
+.btn-no {
+    color: #F2F2F2;
+    background-color: #082040;
+}
+
+.btn-popup-borrar:hover {
+    background-color: #80F2E7;
+    color:#082040;
+    cursor: pointer;
+}
+
+.prueba-borrar {
+    display: flex;
+    justify-content: center;
+}
+
+.popup-content form {
+    display: inline-block;
 }
 
 .pago-box {
