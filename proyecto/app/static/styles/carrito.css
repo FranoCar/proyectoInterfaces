@@ -15,7 +15,7 @@
     width: 45%;
     height: 550px;
     float: left;
-    margin: 25px 50px 75px 100px;
+    margin: 25px 50px 50px 100px;
     padding: 20px;
     overflow-y: scroll;
 }
@@ -35,12 +35,20 @@
 .total {
     position: absolute;
     width: 38%;
-    height: 60px;
+    height: 90px;
     background-color: #FDFFB1;
     margin-left: 0px;
     margin-right: 550px;
     margin-top: 440px;
     margin-bottom: 0px;
+}
+.total h3 {
+    padding: 10px;
+}
+.total h2 {
+    margin: 0;
+    padding: 10px;
+    color: #082040;
 }
 
 .modal-content .item-carrito {
@@ -121,7 +129,7 @@ hr.carrito {
     padding: 20px 50px;
     color: #F2F2F2;
     background-color: #082040;
-    margin-top: 500px;
+    margin-top: 550px;
     margin-left: 10px;
     margin-right: 900px;
     font-size: 13px;
