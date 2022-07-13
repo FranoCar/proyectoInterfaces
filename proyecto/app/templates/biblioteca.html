@@ -27,7 +27,7 @@
 			</div>
 		</header>
 		<div class ="resumen">
-			<h1 class="tit-resumen"> Recientes </h1>
+			<h2 class="tit-resumen"> Recientes </h2>
 			{% for juego in juegos %}
 			<div class = "res-game">
 				<div class="cont-context">
@@ -41,8 +41,15 @@
 			</div>
 			{% endfor %}
 		</div>
-		<div>
+		<div class ="cont-juegos-inst">
+			<h2 class="tit-juegos-inst">Tus juegos</h2>
+			<input type="text" placeholder="busca en tus juegos...">
+			<h3> filtro alfabectico</h3>
+			<h3> filtro por instalacion</h3>
+			<h3> filtro ultima vez jugado</h3>
+			{% for juego in juegos %}
 
+			{% endfor %}
 		</div>
 	</body>
 </html>
