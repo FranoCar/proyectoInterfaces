@@ -28,7 +28,7 @@
 		</header>
 		<div class ="resumen">
 			<h2 class="tit-resumen"> Recientes </h2>
-			{% for juego in juegos %}
+			{% for juego in juegos_j %}
 			<div class = "res-game">
 				<div class="cont-context">
 					<h3 class="subtitulos progreso"> Progreso</h3>
@@ -42,14 +42,34 @@
 			{% endfor %}
 		</div>
 		<div class ="cont-juegos-inst">
-			<h2 class="tit-juegos-inst">Tus juegos</h2>
-			<input type="text" placeholder="busca en tus juegos...">
-			<h3> filtro alfabectico</h3>
-			<h3> filtro por instalacion</h3>
-			<h3> filtro ultima vez jugado</h3>
-			{% for juego in juegos %}
-
-			{% endfor %}
+			<h2 class="tit-juegos-inst">Tus juegos</h2>	
+			<div class="buscador">
+				<input type="text" placeholder="busca en tus juegos...">
+				<h3> filtro alfabetico</h3>
+				<h3> filtro por instalacion</h3>
+				<h3> filtro ultima vez jugado</h3>
+			</div>
+			<div class="lista" id="lista">
+				{% set counter = namespace(value=0) %}
+				{% for juego in juegos_i %}
+					{% if counter.value == 0 %}
+						<div class="row">
+					{% endif %}
+							<div class="item">
+								<a href="{{ url_for('.juego',id=juego[0]) }}">
+									<img src="{{ juego[2] }}" alt="{{ juego[1] }}"><br>{{ juego[1] }}
+								</a>
+							</div>
+					{% set counter.value = counter.value + 1 %}
+					{% if counter.value  == 5 %}
+						{% set counter.value = 0 %}	
+						</div>
+					{% endif %}
+				{% endfor %}
+				{% if counter.value  != 0 %}
+						</div>
+				{% endif %}
+			</div>
 		</div>
 	</body>
 </html>
