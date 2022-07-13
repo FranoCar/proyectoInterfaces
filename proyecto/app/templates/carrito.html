@@ -19,11 +19,21 @@
 			</div>
 		</header>
 		<div id="modalPago" class="modal-pago">
-			<div class="modal-content">
-			  <div class="pago-box">
-				<div class="pago-box-box"></div>
+			<div class="modal-content">				
+				<div class="lista-juegos">
+					{% for juego in juegos %}
+						<div class="item-carrito">
+							<img class="caratula" src="{{ juego[2] }}" alt="{{ juego[1] }}">
+							<p>{{ juego[1] }}</p>
+							<p><strong>${{ precios[loop.index - 1] }} CLP</strong></p>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="total">
+					<h3>Subtotal</h2>
+					<h2>Total</h1>
+				</div>
 				<button id="close" class="btn-cancelar">CANCELAR</button>
-			  </div>
 			  <div class="pago-box">
 				<h2>Método de pago</h2>
 				<img id="pay1" src="static/img/webpay.png" alt="Webpay">
@@ -34,17 +44,16 @@
 			  </div>  
 			</div>
 		</div>
+
 		<div class="lista-juegos">
 			{% for juego in juegos %}
 				<div class="item-carrito">
 					<img class="caratula" src="{{ juego[2] }}" alt="{{ juego[1] }}">
 					<p>{{ juego[1] }}</p>
 					<p><strong>${{ precios[loop.index - 1] }} CLP</strong></p>
-					<form action="{{ url_for('.carrito') }}" method="POST">
 						<button class="btn-borrar" name="borrar" value="{{ juego[0] }}">
 							<img src="static/img/borrar.png" alt="Borrar">
 						</button>
-					</form>
 				</div>
 			{% endfor %}
 		</div>
@@ -58,6 +67,10 @@
 		
 	</body>
 	<script>
+		/*
+			<form action="{{ url_for('.carrito') }}" method="POST">
+			</form>
+		*/
 		var modal = document.getElementById("modalPago");
 		
 		var btn = document.getElementById("pago");
