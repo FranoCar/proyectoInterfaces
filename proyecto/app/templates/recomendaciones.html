@@ -41,7 +41,7 @@
 						<a href="{{ url_for('.juego',id=juego[0]) }}">
 							<img class="carousel-cell-image" data-flickity-lazyload="{{ juego[2] }}" alt="{{ juego[2] }}">
 							<div class="porcentaje">
-								<h2>{{ ((juego[3] - juego[4]) / 100) | int }}%</h2>
+								<h2>{{ (100 - ((juego[4]*100)/juego[3])) | int }}%</h2>
 							</div>
 							<div class="precio">
 								<h4><s>${{ juego[3] }} CLP</s></h4>
@@ -69,7 +69,7 @@
 							</div>
 							{% else %}
 								<div class="porcentaje">
-									<h2>{{ ((juego[3] - juego[4]) / 100) | int }}%</h2>
+									<h2>{{ (100 - ((juego[4]*100)/juego[3])) | int }}%</h2>
 								</div>
 								<div class="precio">
 									<h4><s>${{ juego[3] }} CLP</s></h4>
@@ -101,7 +101,7 @@
 							</div>
 							{% else %}
 								<div class="porcentaje">
-									<h2>{{ ((juego[3] - juego[4]) / 100) | int }}%</h2>
+									<h2>{{ (100 - ((juego[4]*100)/juego[3])) | int }}%</h2>
 								</div>
 								<div class="precio">
 									<h4><s>${{ juego[3] }} CLP</s></h4>

@@ -75,14 +75,14 @@
 				<h2>Calificación</h2>
 				<div class="float-child">
 					<a>Usuarios</a>
-					<h2>{{ juego[4] }}</h2>
+					<h2 class="estrella">{{ juego[4] }}</h2>
 				</div>
 				<div class="float-child">
 					<a>Expertos</a>
-					<h2>{{ juego[5] }}</h2>
+					<h2 class="estrella">{{ juego[5] }}</h2>
 				</div>
 				<h2>Tu calificación</h2>
-				<p>(aquí van estrellitas)</p>
+				<img src="static/img/estrellitas.png" alt="Usuario">
 				<h2>Precio</h2>
 				{% if precio == 0 %}
 					<h2>Gratis</h2>
@@ -92,6 +92,7 @@
 				</div>
 				<div class="float-child">
 					<h2>{{ "$" + oferta|string + " CLP" }}</h2>
+					<span class="descuento">{{ (100 - ((oferta*100)/precio)) | int  }}%</span>
 				</div>
 				{% else %}
 				<h2>{{ "$" + precio|string +" CLP" }}</h2>
